@@ -1,6 +1,6 @@
 # Cloudflare redirects (D-076). /download/latest always points at the current installer;
 # update it with each release.
-/download/latest  /download/Mactivity-1.9.2.dmg  302
+/download/latest  /download/Mactivity-1.10.0.dmg  302
 # The download page was /beta during the private beta.
 /beta  /download  301
 /beta.html  /download  301

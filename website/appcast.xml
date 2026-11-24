@@ -6,6 +6,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <link>https://mactivity.app/appcast.xml</link>
     <language>en</language>
     <item>
+      <title>Mactivity 1.10.0</title>
+      <pubDate>Tue, 24 Nov 2026 15:06:58 -0600</pubDate>
+      <sparkle:version>37</sparkle:version>
+      <sparkle:shortVersionString>1.10.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<ul><li><b>Mactivity is free.</b> No license key, no account: the license screen, Settings → License and the license check are gone, and the source is open under the MIT license. Bought a license earlier? There is nothing to do.</li><li><b>Focus streaks</b>, on History: your longest stretches in one app each day, and which apps break them up most.</li><li><b>Busiest hours</b>, on History: a weekday-by-hour grid of when your Mac works hardest and when it sits idle. Time it was off or asleep stays blank.</li><li><b>Notifications by app</b>, on History: which apps send the most and at what times of day, keeping only the app and the time, never what it said.</li><li><b>Your week, on your day:</b> choose the day your weekly summary arrives, Sunday evening included.</li><li><b>Bigger figures:</b> a Larger setting in Settings → Customize for figures, chart labels and the text around them.</li><li><b>Chargers compared</b>, on the Battery tab: how many watts each power rating really delivers and how fast it fills the battery, compared like for like.</li><li><b>Battery temperature</b>, on the Battery tab: how warm the battery runs while charging and in use, over the same range as the watts.</li><li><b>Local databases</b>, in Projects: the PostgreSQL, MySQL, Redis and MongoDB running on your Mac, with their memory, their data on disk, and the ones showing no sign of use in weeks.</li><li><b>Test run times:</b> <code>swift test</code>, <code>npm test</code>, <code>pytest</code> and <code>cargo test</code> timed per project like builds, with failed and cancelled runs marked and not mistaken for fast ones.</li><li><b>Projects at a glance</b>, in Projects → Folders: each project's language, the runtime version it asks for, its size and when you last worked in it. Space now lives here as Build Folders.</li><li><b>Remote sessions</b>, in Projects: the SSH sessions and tunnels open from your Mac, how long each has been open, and the ports they forward.</li><li><b>What wears your SSD</b>, on the Disk tab: each app's writes over 30 days beside the drive's own lifetime figure.</li><li><b>Old app versions and leftovers</b>, in Storage → Clean Up: second copies of apps and support files of apps that are gone, each explained, nothing ticked, and only ever to the Trash.</li><li><b>Photos library</b>, on Storage: what it takes on this Mac, by originals, edits, thumbnails, shared albums and database.</li><li><b>External drives</b>, on the Disk tab: space and health, remembered with "last seen" after you unplug them.</li><li><b>Network drives</b>, on the Disk tab: space for each share, "Not responding" for a dead one, and activity for NFS. A stuck share no longer holds up sampling.</li><li><b>Crowded Wi-Fi channels</b>, on the Network tab: scan to see whether nearby networks share your channel, and which channel sounds quieter.</li><li><b>Configuration profiles</b>, on the Security page: the profiles installed for you, who put them there and the kinds of setting they change, and whether your Mac is managed.</li><li><b>Unlocks</b>, on the Security page: when your Mac was unlocked and whether with Touch ID, a password or your Apple Watch, plus any failed attempts macOS logged.</li><li><b>Warnings you can read in light mode:</b> amber warnings, such as a project that's barely used, and the green "faster" beside build and test times are darker on light backgrounds. Dark mode is unchanged.</li></ul>]]></description>
+      <enclosure url="https://mactivity.app/download/Mactivity-1.10.0.dmg" type="application/octet-stream"
+        sparkle:edSignature="uDLnMiVNO66GHOzAv8J2R+HX8HeqI3S/2q4g068oWpVgqFXyMtDMbNHL0uOEryc9yw+W+vKixYuE3VvceSwwCg==" length="16532824"/>
+    </item>
+    <item>
       <title>Mactivity 1.9.2</title>
       <pubDate>Tue, 03 Nov 2026 12:25:31 -0600</pubDate>
       <sparkle:version>36</sparkle:version>
@@ -336,6 +346,6 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: WDGMEBMU2wFEuE5qSOU2OlokSiQPJDNFl7azqIzZJKGfgrpqLBwuMkrZUV0A2QOj5rCvscSQ9BoqYz/P0IyXCw==
-length: 72804
+edSignature: S3tMgUYgOuHoJq+24idGSItYU27X+xCbXquVhjB5r9KAkdk+lETtM6lxD68kqRIYrmTPsa9AcvR/C4GZ8T5sBA==
+length: 76837
 -->
