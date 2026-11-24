@@ -1,0 +1,23 @@
+// mactivity.app: the static website and installers, served as a Worker with static assets
+// (Cloudflare's successor to Pages; D-076). No Worker code: every request is a file in
+// build/site, staged by scripts/site.sh. _headers and _redirects in website/ apply.
+{
+  "name": "mactivity",
+  // The account ID isn't kept here: scripts/site.sh passes it as CLOUDFLARE_ACCOUNT_ID.
+  "compatibility_date": "2026-09-27",
+  "assets": {
+    "directory": "./build/site",
+    // /privacy serves privacy.html.
+    "html_handling": "auto-trailing-slash",
+    // Unknown addresses get 404.html with a 404 status.
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "mactivity.app", "custom_domain": true },
+    { "pattern": "www.mactivity.app", "custom_domain": true }
+  ],
+  // No workers.dev copy of the site: mactivity.app is the only address.
+  "workers_dev": false,
+  // No usage data from the site.
+  "observability": { "enabled": false }
+}

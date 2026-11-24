@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Front layer: the activity trace, crossing the dial. -->
+  <path d="M 150 560 H 360 L 430 400 L 520 700 L 606 318 L 676 560 H 874"
+        fill="none" stroke="#FFFFFF" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

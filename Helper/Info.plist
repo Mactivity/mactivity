@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>app.mactivity.helper</string>
+	<key>CFBundleName</key>
+	<string>MactivityHelper</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<!-- Pins the client requirement (spec 6.9). Empty in ad-hoc builds: the helper then refuses to serve. -->
+	<key>MactivityTeamID</key>
+	<string>$(DEVELOPMENT_TEAM)</string>
+</dict>
+</plist>

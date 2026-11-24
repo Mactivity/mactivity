@@ -1,0 +1,268 @@
+# XcodeGen spec. The single source of truth for targets; Mactivity.xcodeproj is generated and gitignored.
+name: Mactivity
+
+options:
+  bundleIdPrefix: app.mactivity
+  deploymentTarget:
+    macOS: "26.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+  groupSortPosition: top
+  # The app's package pins, committed in App/Package.resolved, into the generated project (D-183).
+  postGenCommand: scripts/pin-packages.sh
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    ARCHS: arm64
+    ONLY_ACTIVE_ARCH: NO
+    MACOSX_DEPLOYMENT_TARGET: "26.0"
+    SDKROOT: macosx
+    # Ad-hoc signing until M8; {{TEAM_ID}} goes here then (CLAUDE.md, make release).
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: ""
+    # The Developer ID team `make release` signs with. Debug builds stay ad-hoc. Set by `make apple-setup`.
+    MACTIVITY_RELEASE_TEAM: "M48435UMZ2"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    DEAD_CODE_STRIPPING: YES
+    # Localization (docs/localization/README.md): the compiler extracts every localizable literal
+    # into .stringsdata, which `make sync-strings` merges into the String Catalogs.
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    MARKETING_VERSION: "1.9.2"
+    CURRENT_PROJECT_VERSION: "36"
+packages:
+  MactivityKit:
+    path: Packages/MactivityKit
+  # Approved dependency (CLAUDE.md rule 6): updates. Signed appcast, checked at most daily.
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: 2.10.0
+
+targets:
+  Mactivity:
+    type: application
+    platform: macOS
+    sources:
+      - path: App/Sources
+      - path: App/Mactivity.icon
+        buildPhase: resources
+      # Info.plist's display name, copyright, and permission prompts, per language.
+      - path: App/InfoPlist.xcstrings
+        buildPhase: resources
+      # Every version's release notes, for What's New after an update (D-179). A few kB.
+      - path: docs/releases
+        type: folder
+        buildPhase: resources
+      # The privileged helper's launchd plist (spec 6.9), registered with SMAppService.daemon.
+      - path: Helper/app.mactivity.helper.plist
+        buildPhase:
+          copyFiles:
+            destination: wrapper
+            subpath: Contents/Library/LaunchDaemons
+    dependencies:
+      - target: MactivityHelper
+        copy:
+          destination: executables
+      # `mactivity` CLI (E6) in Contents/Helpers: Contents/MacOS/mactivity would overwrite the
+      # app's own Mactivity executable on case-insensitive APFS.
+      - target: MactivityCLI
+        copy:
+          destination: wrapper
+          subpath: Contents/Helpers
+      # Desktop widgets (E7), embedded in Contents/PlugIns.
+      - target: MactivityWidgets
+      - package: MactivityKit
+        products: [Core, Sampling, Simulated, Grouping, History, Alerts, Projects, Sensors, Audio, Docker, Readouts, Startup, Storage, Protections, UI]
+      - package: Sparkle
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Mactivity
+        CFBundleName: Mactivity
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        LSApplicationCategoryType: public.app-category.utilities
+        LSUIElement: false
+        # malloc hands freed pages back instead of keeping them for reuse: about 30 MB less once the
+        # window has closed, at no measured CPU cost (D-269). Not documented; if macOS ever stops
+        # reading it, memory goes back up and `make measure` shows it.
+        LSEnvironment:
+          MallocSpaceEfficient: "1"
+        NSHumanReadableCopyright: "© 2026 Kade Clifton"
+        NSPrincipalClass: NSApplication
+        # AirPods and other Bluetooth accessory batteries (spec 5.6, D-041).
+        NSBluetoothAlwaysUsageDescription: "Mactivity reads the battery level of your AirPods and other Bluetooth accessories. It doesn't connect to or change them."
+        # Per-app volume (M10) taps an app's audio only to scale it (docs/spikes/M10-per-app-volume.md).
+        NSAudioCaptureUsageDescription: "Mactivity listens to an app's audio only to change its volume when you move its slider. Nothing is recorded or stored."
+        # Storage map (E10): macOS asks once per folder when a scan reaches it without Full Disk Access.
+        NSDesktopFolderUsageDescription: "Mactivity measures how much space the files on your Desktop take up. It doesn't read or change their contents."
+        NSDocumentsFolderUsageDescription: "Mactivity measures how much space your Documents take up. It doesn't read or change their contents."
+        NSDownloadsFolderUsageDescription: "Mactivity measures how much space your Downloads take up. It doesn't read or change their contents."
+        NSRemovableVolumesUsageDescription: "Mactivity measures how much space is used on the drive you chose. It doesn't read or change file contents."
+        NSNetworkVolumesUsageDescription: "Mactivity measures how much space is used on the network volume you chose. It doesn't read or change file contents."
+        # Sparkle (M8). The feed lives on mactivity.app; the updater stays off until the EdDSA
+        # public key is filled in too (spec 12.1).
+        # Pins the helper's code-signing requirement (spec 6.9); empty in ad-hoc builds.
+        MactivityTeamID: $(DEVELOPMENT_TEAM)
+        # A word after the version in About and feedback emails ("beta" during the private beta,
+        # D-073). Empty since 1.0: About reads "Version 1.0 (10)".
+        MactivityReleaseChannel: ""
+        # Help → Send Feedback… opens the user's own mail app addressed here when an address is set.
+        # Empty: the menu item is hidden.
+        MactivityFeedbackEmail: ""
+        CFBundleURLTypes:
+          - CFBundleURLName: app.mactivity.control
+            CFBundleURLSchemes: [mactivity]
+        # Compare two Macs (1.6): a report file another Mac's Mactivity opens.
+        UTExportedTypeDeclarations:
+          - UTTypeIdentifier: app.mactivity.report
+            UTTypeDescription: Mactivity Report
+            UTTypeConformsTo: [public.json, public.data]
+            UTTypeTagSpecification:
+              public.filename-extension: [mactivityreport]
+        CFBundleDocumentTypes:
+          - CFBundleTypeName: Mactivity Report
+            CFBundleTypeRole: Viewer
+            LSHandlerRank: Owner
+            LSItemContentTypes: [app.mactivity.report]
+        SUFeedURL: https://mactivity.app/appcast.xml
+        SUPublicEDKey: "pPpKbAAXDkT4BEU4aeLb2trEbsjTyuwyufc83x7uPLw="
+        SUEnableAutomaticChecks: true
+        SUScheduledCheckInterval: 86400
+        # D-256: check an update's signature before unpacking it, and accept only a signed feed
+        # (release notes included), so a changed feed or a crafted archive is refused.
+        SUVerifyUpdateBeforeExtraction: true
+        SURequireSignedFeed: true
+    entitlements:
+      path: App/Mactivity.entitlements
+      properties:
+        # Shared with the widget extension (E7). Team-prefixed, so a Developer ID build can use it
+        # without a provisioning profile; ad-hoc builds (no team) never open the container.
+        com.apple.security.application-groups: [$(TeamIdentifierPrefix)app.mactivity]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.mactivity.Mactivity
+        PRODUCT_NAME: Mactivity
+        ASSETCATALOG_COMPILER_APPICON_NAME: Mactivity
+        ENABLE_PREVIEWS: YES
+        # Off in local ad-hoc builds: library validation would reject Sparkle.framework, which
+        # carries Sparkle's own team signature. `make release` turns it on and re-signs every
+        # embedded framework with the Developer ID (D-039).
+        ENABLE_HARDENED_RUNTIME: NO
+        GENERATE_INFOPLIST_FILE: NO
+
+  # Privileged, read-only helper (M9, spec 6.9). Embedded in Contents/MacOS.
+  MactivityHelper:
+    type: tool
+    platform: macOS
+    sources:
+      - path: Helper
+        excludes:
+          - "*.plist"
+    dependencies:
+      - package: MactivityKit
+        products: [Core, Sampling]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.mactivity.helper
+        PRODUCT_NAME: MactivityHelper
+        INFOPLIST_FILE: Helper/Info.plist
+        CREATE_INFOPLIST_SECTION_IN_BINARY: YES
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_HARDENED_RUNTIME: YES
+        SKIP_INSTALL: YES
+
+  # `mactivity` command-line tool (E6). Same sources as the package's MactivityCLI executable;
+  # built here so the app can carry it. Read-only: nothing in it stops or kills anything.
+  MactivityCLI:
+    type: tool
+    platform: macOS
+    sources:
+      - path: Packages/MactivityKit/Sources/MactivityCLI
+    dependencies:
+      - package: MactivityKit
+        products: [Core, Sampling, Grouping, Projects, Readouts, History]
+    settings:
+      base:
+        PRODUCT_NAME: mactivity
+        # The binary is `mactivity`, but its module can't be: on a case-insensitive disk,
+        # mactivity.swiftmodule and the app's Mactivity module collide, and the app tests'
+        # `@testable import Mactivity` finds the wrong one.
+        PRODUCT_MODULE_NAME: MactivityCLI
+        PRODUCT_BUNDLE_IDENTIFIER: app.mactivity.cli
+        # `mactivity --version` reads CFBundleShortVersionString from the embedded plist.
+        GENERATE_INFOPLIST_FILE: YES
+        CREATE_INFOPLIST_SECTION_IN_BINARY: YES
+        ENABLE_HARDENED_RUNTIME: YES
+        SKIP_INSTALL: YES
+
+  # Desktop widgets (E7). Sandboxed, as WidgetKit requires; reads the app's JSON from the
+  # `<TEAMID>.app.mactivity` app group. Ad-hoc builds have no team, so the widgets say
+  # "Open Mactivity" until a Developer ID build.
+  MactivityWidgets:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: Widgets/Sources
+    dependencies:
+      - package: MactivityKit
+        products: [Core, Readouts]
+      - sdk: WidgetKit.framework
+      - sdk: SwiftUI.framework
+    info:
+      path: Widgets/Info.plist
+      properties:
+        CFBundleDisplayName: Mactivity
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: "© 2026 Kade Clifton"
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        # The app group is `<this>.app.mactivity`; empty in ad-hoc builds.
+        MactivityTeamID: $(DEVELOPMENT_TEAM)
+    entitlements:
+      path: Widgets/MactivityWidgets.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups: [$(TeamIdentifierPrefix)app.mactivity]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.mactivity.Mactivity.Widgets
+        PRODUCT_NAME: MactivityWidgets
+        GENERATE_INFOPLIST_FILE: NO
+        SKIP_INSTALL: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks"
+
+  MactivityTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: AppTests
+    dependencies:
+      - target: Mactivity
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.mactivity.tests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/Mactivity.app/Contents/MacOS/Mactivity
+        BUNDLE_LOADER: $(TEST_HOST)
+
+schemes:
+  Mactivity:
+    build:
+      targets:
+        Mactivity: all
+        MactivityTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: false
+      targets:
+        - MactivityTests
+    archive:
+      config: Release

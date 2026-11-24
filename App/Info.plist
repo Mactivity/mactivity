@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Mactivity</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Mactivity Report</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>app.mactivity.report</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Mactivity</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>app.mactivity.control</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>mactivity</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>LSEnvironment</key>
+	<dict>
+		<key>MallocSpaceEfficient</key>
+		<string>1</string>
+	</dict>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>LSUIElement</key>
+	<false/>
+	<key>MactivityFeedbackEmail</key>
+	<string></string>
+	<key>MactivityReleaseChannel</key>
+	<string></string>
+	<key>MactivityTeamID</key>
+	<string>$(DEVELOPMENT_TEAM)</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>Mactivity listens to an app's audio only to change its volume when you move its slider. Nothing is recorded or stored.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Mactivity reads the battery level of your AirPods and other Bluetooth accessories. It doesn't connect to or change them.</string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>Mactivity measures how much space the files on your Desktop take up. It doesn't read or change their contents.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>Mactivity measures how much space your Documents take up. It doesn't read or change their contents.</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>Mactivity measures how much space your Downloads take up. It doesn't read or change their contents.</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2026 Kade Clifton</string>
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>Mactivity measures how much space is used on the network volume you chose. It doesn't read or change file contents.</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>Mactivity measures how much space is used on the drive you chose. It doesn't read or change file contents.</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://mactivity.app/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>pPpKbAAXDkT4BEU4aeLb2trEbsjTyuwyufc83x7uPLw=</string>
+	<key>SURequireSignedFeed</key>
+	<true/>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
+	<key>SUVerifyUpdateBeforeExtraction</key>
+	<true/>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.json</string>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Mactivity Report</string>
+			<key>UTTypeIdentifier</key>
+			<string>app.mactivity.report</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>mactivityreport</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.microsoft.update.agent</string>
+	<key>AssociatedBundleIdentifiers</key>
+	<string>com.microsoft.autoupdate2</string>
+	<key>Disabled</key>
+	<true/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app/Contents/MacOS/Microsoft Update Assistant</string>
+		<string>--launchByAgent</string>
+	</array>
+	<key>StartInterval</key>
+	<integer>7200</integer>
+</dict>
+</plist>

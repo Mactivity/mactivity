@@ -1,0 +1,35 @@
+# Mactivity
+
+> Mactivity is a native Mac system monitor for Macs with Apple silicon on macOS 26 or later. It groups every process under the app it belongs to, keeps a year of history, explains in plain words why the Mac is slow, hot or draining its battery, and sits in the menu bar. Free and open source (MIT), with no license key, account or subscription. It sends nothing about your Mac anywhere: no analytics, no accounts.
+
+Made by Kade Clifton. Signed and notarized by Apple. In 11 languages. Not on the Mac App Store; a free download at mactivity.app, with the source at https://github.com/Mactivity/mactivity, and installable with Homebrew (`brew install --cask mactivity/tap/mactivity`).
+
+## What it does
+
+- Activity by app: about 60 apps instead of about 1,000 processes, each with CPU, GPU, memory, Energy Impact, disk and network, adding up to the system totals.
+- Why is my Mac slow?: watches for a few seconds and names the cause (an app hogging the processor, memory running short, heat, a full disk, or macOS busy with Spotlight, Time Machine, Photos or iCloud), with the fix. Also lists the slowdowns of the last week.
+- Checkup: a short list of what's worth doing, each with a button to the screen that fixes it.
+- A year of history per app, with Your day, Your week, Compare, Rewind (the apps behind any moment) and Out of the ordinary (each app's usual day, learned on your Mac).
+- Battery use by app with each app's watts over any range, the whole Mac's average and peak power, battery health month by month, sleep and wake with what woke the Mac, and what keeps it awake.
+- Looking back: Your month and Your year (time in use, busiest days, apps that came and went, agents' hours), notes pinned to moments in history, heat by app, and charging habits (advice only).
+- Alerts for runaway apps, growing memory, crashes, new startup items, low disk and more.
+- Menu bar as an icon, a figure, a small graph or up to four stacked figures.
+- Storage: a disk map and what you can free (Messages attachments, iPhone backups, installers, developer caches, big files unused for a year, downloads never opened, duplicate files), cloud folders sized (iCloud Drive, Dropbox, Google Drive, OneDrive), an app uninstaller. Everything goes to the Trash after you confirm; nothing is deleted.
+- For developers: dev servers and ports by project, Docker, Homebrew services, Simulators, space per project, build times, coding-agent history (Claude Code, Codex and others), a read-only `mactivity` command and MCP server.
+- Camera and microphone history: which apps used the camera, a microphone, screen recording or the location, when and for how long, read on the Mac from macOS's privacy indicators; nothing is sent anywhere.
+- Time in calls: hours in video and voice calls this week and today, by app and by day.
+- Security: FileVault, Gatekeeper, System Integrity Protection, the firewall and automatic updates, on or off; which apps have Screen Recording, Full Disk Access, Accessibility and Input Monitoring (with Full Disk Access on; on macOS 26 also the camera, microphone, Automation and folders, which macOS 27 keeps from other apps); system extensions; and what each browser extension can reach. Read-only.
+- Network interfaces: what `ifconfig` shows, in plain words, for every connection on the Mac, with a hover explaining each fact.
+- Outdated software: Homebrew packages and language versions (pyenv, nvm, rbenv, asdf, mise) past their end of life or with known vulnerabilities (opt-in check through Homebrew and OSV.dev), with upgrades after confirming; also Homebrew itself and apps carrying an old Sparkle updater, from a table that ships with the app.
+- Sensors, fans, accessory batteries, displays and devices, startup items, code signatures, open ports and the firewall, Wi-Fi over time, a monthly data budget.
+- Your own keyboard shortcuts, a Stay Awake widget, Siri and Shortcuts summaries (your day, out of the ordinary, builds, agent time), alerts held while you're on a call or presenting, and a report file to compare two Macs.
+- Light: under 0.2% of one core and under 30 MB of memory, idle with the menu bar icon.
+
+## Pages
+
+- [Home](https://mactivity.app/): every feature, and a working copy of the app on sample data
+- [Download](https://mactivity.app/download): the installer and setup steps
+- [Source](https://github.com/Mactivity/mactivity): the code, under the MIT license
+- [Roadmap](https://mactivity.app/roadmap): what's available, what's next, and the rules it's built by
+- [Changelog](https://mactivity.app/changelog): what changed in each version
+- [Privacy](https://mactivity.app/privacy): what the app and the website collect (the app: nothing)

@@ -1,0 +1,7 @@
+# mactivity.app. Search engines and AI search may read and quote every page; AI training may not
+# (2026-10-16). Content signals: https://contentsignals.org
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+Sitemap: https://mactivity.app/sitemap.xml

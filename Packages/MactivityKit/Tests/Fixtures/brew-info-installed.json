@@ -1,0 +1,40 @@
+{
+  "formulae": [
+    {
+      "name": "openssl@3", "full_name": "openssl@3", "outdated": true, "linked_keg": null,
+      "versions": {"stable": "3.5.9", "head": null, "bottle": true},
+      "deprecated": false, "deprecation_date": "2030-04-08", "deprecation_reason": null,
+      "disabled": false, "disable_date": null, "disable_reason": null,
+      "installed": [{"version": "3.5.1", "installed_on_request": false, "poured_from_bottle": true}]
+    },
+    {
+      "name": "php@8.1", "full_name": "php@8.1", "outdated": false, "linked_keg": "8.1.34",
+      "versions": {"stable": "8.1.34", "head": null, "bottle": true},
+      "deprecated": true, "deprecation_date": "2025-12-31", "deprecation_reason": "unsupported",
+      "disabled": false, "disable_date": "2026-12-31", "disable_reason": null,
+      "installed": [{"version": "8.1.34", "installed_on_request": true}]
+    },
+    {
+      "name": "node", "full_name": "node", "outdated": false, "linked_keg": "26.12.1",
+      "versions": {"stable": "26.12.1", "head": "HEAD", "bottle": true},
+      "deprecated": false, "deprecation_reason": null, "disabled": false, "disable_reason": null,
+      "installed": [{"version": "26.0.0", "installed_on_request": true}, {"version": "26.12.1", "installed_on_request": true}]
+    },
+    {
+      "name": "python@3.9", "full_name": "python@3.9", "outdated": false, "linked_keg": "3.9.25",
+      "versions": {"stable": "3.9.25", "head": null, "bottle": true},
+      "deprecated": false, "deprecation_reason": null, "disabled": true, "disable_reason": "unsupported",
+      "installed": [{"version": "3.9.25", "installed_on_request": true}]
+    },
+    {
+      "name": "not-installed", "outdated": false, "versions": {"stable": "1.0"}, "installed": []
+    }
+  ],
+  "casks": [
+    {"token": "firefox", "installed": "130.0", "version": "144.0", "outdated": true, "auto_updates": true,
+     "deprecated": false, "disabled": false},
+    {"token": "visual-studio-code-old", "installed": "1.80.0", "version": "1.105.0", "outdated": true, "auto_updates": false,
+     "deprecated": true, "deprecation_reason": "discontinued", "disabled": false},
+    {"token": "never-installed", "installed": null, "version": "2.0", "outdated": false}
+  ]
+}

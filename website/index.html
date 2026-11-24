@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mactivity: Mac system monitor and Activity Monitor alternative</title><link rel="canonical" href="https://mactivity.app/">
+<meta name="description" content="A Mac system monitor for people who like the numbers: activity by app, why your Mac is slow, a year of history, battery use by app, alerts and the menu bar. Free and open source.">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Mactivity: your whole Mac, in one light app"><meta property="og:description" content="A Mac system monitor for people who like the numbers: activity by app, why your Mac is slow, a year of history, battery use by app, alerts and the menu bar. Free and open source.">
+<meta property="og:url" content="https://mactivity.app/"><meta property="og:type" content="website"><meta property="og:site_name" content="Mactivity"><meta property="og:image" content="https://mactivity.app/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script><script src="/replica.js" defer></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mactivity","url":"https://mactivity.app/","image":"https://mactivity.app/og.png","description":"A Mac system monitor that groups every process under its app, keeps a year of history, explains why your Mac is slow, and lives in the menu bar.","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 26 or later, Apple silicon","downloadUrl":"https://mactivity.app/download","inLanguage":["en","de","es","fr","it","ja","ko","nl","pt-BR","zh-Hans","zh-Hant"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://mactivity.app/download"},"isAccessibleForFree":true,"license":"https://opensource.org/license/mit","publisher":{"@type":"Organization","name":"Mactivity","url":"https://mactivity.app/","logo":"https://mactivity.app/icons/icon-512.png"}}</script></head>
+<body>
+<nav><a class="brand" href="/"><img src="/icons/mark-96.png" alt="">Mactivity</a><div class="links"><a href="#tour">Tour</a><a href="#features">Features</a><a href="/roadmap">Roadmap</a><a href="/changelog">Changelog</a><a href="/privacy">Privacy</a><a class="cta" href="/download">Download</a></div></nav>
+<main>
+
+<section class="hero">
+<div class="hero-title"><img class="app-icon" src="/icons/icon-512.png" alt="Mactivity app icon" width="128" height="128">
+<p class="eyebrow">Mac system monitor</p>
+<h1>Your whole Mac,<br><span class="gradient">in one light app.</span></h1></div>
+<div class="hero-copy"><p class="lead">Find out why your Mac is slow in one click. Activity by app, a Checkup of what&#39;s worth doing, battery use by app, a year of history, sleep and wake, alerts, disk space and what you can free, an app uninstaller, dev servers, sensors, and the displays and devices on your desk. The jobs of several small utilities, in one native app that stays out of your way.</p>
+<a class="button" href="/download">Download Mactivity</a><a class="button secondary" href="#tour">Try it in your browser</a>
+<p class="fine">Free and open source · Signed and notarized by Apple · In 11 languages · Apple silicon, macOS 26 or later</p></div>
+</section>
+
+<section id="tour" class="replica">
+<div class="center head"><div><p class="eyebrow">Take it for a spin</p><h2>This is the app. Click around.</h2></div>
+<p class="lead">A working copy of Mactivity's window, running on sample data. Pick anything in the sidebar.</p></div>
+<div data-replica><img class="rw-fallback" src="/shots/overview-dark.png" width="1650" height="1080" alt="Mactivity's Overview: CPU, GPU, memory, disk, network and battery cards with the busiest apps"></div>
+</section>
+
+<section class="band demo reveal" id="apps">
+<div class="center head"><div><p class="eyebrow">Grouped by app</p><h2>Who's using your Mac?</h2></div>
+<p class="lead">Pick a metric and the apps line up behind it, each with its helpers folded inside. Open one to see the processes that add up to its figure, or right-click it for its own history: the last 7, 30 or 90 days, and the hours of the week it works hardest.</p></div>
+<div class="ms" data-switcher>
+<div class="ms-head"><div class="seg" role="group" aria-label="Metric">
+<button type="button" data-metric="cpu" aria-pressed="true">CPU</button><button type="button" data-metric="gpu" aria-pressed="false">GPU</button><button type="button" data-metric="memory" aria-pressed="false">Memory</button><button type="button" data-metric="network" aria-pressed="false">Network</button><button type="button" data-metric="energy" aria-pressed="false">Energy</button>
+</div></div>
+<div class="ms-list"><noscript><p class="fine">Turn on JavaScript to try this.</p></noscript></div>
+</div>
+</section>
+
+<section class="band demo reveal" id="menubar">
+<div class="center head"><div><p class="eyebrow">Menu bar</p><h2>Four ways to sit in your menu bar.</h2></div>
+<p class="lead">Pick a display, then click it to open the menu bar window. Every display keeps a fixed width, so nothing else in your menu bar shifts.</p></div>
+<div class="mbd" data-mbd>
+<div class="mbd-controls">
+<div class="seg" role="group" aria-label="Display"><button type="button" data-mode="icon" aria-pressed="false">Icon</button><button type="button" data-mode="figure" aria-pressed="false">Figure</button><button type="button" data-mode="graph" aria-pressed="false">Graph</button><button type="button" data-mode="stacked" aria-pressed="true">Stacked</button></div>
+<div class="seg small" role="group" aria-label="Metrics" data-metrics><button type="button" data-metric="cpu">CPU</button><button type="button" data-metric="gpu">GPU</button><button type="button" data-metric="memory">Memory</button><button type="button" data-metric="network">Network</button><button type="button" data-metric="temp">Temperature</button><button type="button" data-metric="battery">Battery</button></div>
+<p class="fine mbd-hint">Pick up to four.</p>
+</div>
+<div class="mbd-screen">
+<div class="mbd-bar"><div class="mbd-left"><b></b><span>Finder</span><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span></div>
+<div class="mbd-right"><button type="button" class="mbd-item" aria-expanded="true" aria-label="Mactivity in the menu bar"></button><span class="mbd-clock">Sun 9:41 AM</span></div></div>
+<div class="mbd-window">
+<div class="mbd-tabs" aria-hidden="true"><i class="on">All</i><i>CPU</i><i>GPU</i><i>MEM</i><i>DISK</i><i>NET</i><i>BAT</i></div>
+<div class="mbd-card mbd-rows"></div>
+<div class="mbd-card"><p class="mbd-label">Busiest right now</p><div class="mbd-busy"></div></div>
+<div class="mbd-footer"><button type="button">Quit Mactivity</button><button type="button" class="prominent">Open Mactivity</button></div>
+</div>
+</div>
+<p class="mbd-caption">Simulated figures: a web page can't read your Mac, and shouldn't.</p>
+</div>
+</section>
+
+<section class="band demo reveal" id="projects">
+<div class="center head"><div><p class="eyebrow">Projects</p><h2>Every dev server, and what it's costing you.</h2></div>
+<p class="lead">Mactivity finds the servers holding your ports, groups them by project folder, and points out the ones you forgot about. Stopping one always asks first. Try it.</p></div>
+<div class="pd" data-projects>
+<div class="pd-head"><span class="pd-summary"></span><button type="button" class="pd-stop-idle">Stop Idle…</button></div>
+<div class="pd-rows"></div>
+<div class="pd-sheet" hidden role="alertdialog" aria-modal="false" aria-labelledby="pd-sheet-title"><p class="pd-sheet-title" id="pd-sheet-title"></p><p class="pd-sheet-text"></p><div><button type="button" class="pd-cancel">Cancel</button><button type="button" class="pd-confirm">Stop</button></div></div>
+<p class="pd-toast" hidden role="status"></p>
+<button type="button" class="pd-reset">Start them again</button>
+</div>
+</section>
+
+<section class="stats" aria-label="Performance">
+<div class="stat"><b>&lt;0.2%</b><span>of one core with the menu bar icon</span></div>
+<div class="stat"><b>&lt;30 MB</b><span>of memory while idle</span></div>
+<div class="stat"><b>37 MB</b><span>installed, 15 MB download</span></div>
+<div class="stat"><b>0</b><span>analytics or accounts in the app</span></div>
+</section>
+
+<section id="features" class="band reveal">
+<div class="center"><p class="eyebrow">Also in the app</p><h2>The rest of the toolbox.</h2></div>
+<div class="grid two">
+<div class="card"><p class="eyebrow">Your disk</p><h3>The space you forgot about.</h3><p>Big files you haven&#39;t opened in a year, downloads you never opened at all, copies of the same file in different folders, and how much iCloud Drive, Dropbox, Google Drive and OneDrive keep downloaded on this Mac. Your projects, Library and app bundles are left alone, and nothing goes to the Trash until you confirm.</p></div><div class="card"><p class="eyebrow">Everywhere</p><h3>Your keys, your widgets, your Siri.</h3><p>Pick the keys for Quick Search, Clean Keyboard, Stay Awake and any page. Flip Stay Awake from a desktop widget, ask Siri how your day went, and alerts wait while you&#39;re on a call or presenting. Comparing two Macs is a report file you move yourself, never an account.</p></div><div class="card"><p class="eyebrow">Looking back</p><h3>Your month, your year.</h3><p>Each month and the whole year in a few figures: time in use, the busiest days, the apps you used most and the ones that came and went, your agents&#39; hours. Pin a note to any moment and see it on every chart. Plus which apps keep your Mac warm, and how its battery is charged.</p></div><div class="card"><p class="eyebrow">Outdated software</p><h3>What needs a security update.</h3><p>The Homebrew packages, Python, Node.js, Ruby and PHP versions on your Mac that no longer get security fixes, or have known vulnerabilities if you turn on the check, and the apps whose built-in updater has known vulnerabilities. Checkup names them, an alert says when one turns up, and Homebrew packages upgrade after you confirm.</p></div><div class="card"><p class="eyebrow">Camera and microphone</p><h3>Who used your camera.</h3><p>Which apps turned on the camera or a microphone, recorded the screen or read your location this week, when, and for how long, with a video call as one line on Your day and your hours in calls by app and by day. It comes from the dots macOS shows in the menu bar, and stays on your Mac.</p></div><div class="card"><p class="eyebrow">Safety and the network</p><h3>Who can reach your Mac, and what changed.</h3><p>The ports other devices on your network can reach and whether the firewall is on, an alert when something adds itself to start with your Mac, and who made every app that&#39;s running. Wi-Fi&#39;s signal through the day, each network you were on, and a monthly data budget with an alert before you go over.</p></div><div class="card"><p class="eyebrow">For developers</p><h3>What your projects leave behind.</h3><p>Each project&#39;s build folders sized, from node_modules to DerivedData, with the untouched ones moved to the Trash together after you confirm. Docker&#39;s disk use, Homebrew services, every Simulator and emulator, and the language servers and watchers still running after you closed the editor.</p></div><div class="card"><p class="eyebrow">Out of the ordinary</p><h3>It learns what normal looks like.</h3><p>Mactivity learns each app&#39;s usual day on your Mac and tells you when today isn&#39;t one: &ldquo;Safari: 5.5 GB of memory today, 4&times; its usual 1.3 GB.&rdquo; It shows on Overview and in Checkup, and as a notification once a day when an app goes far past its usual. Each app&#39;s history shows today beside its usual day.</p></div><div class="card"><p class="eyebrow">Flagged by macOS</p><h3>What macOS caught, in plain words.</h3><p>macOS keeps reports when an app writes tens of gigabytes to disk, keeps the processor busy past its limits, or gets closed because memory ran out. Mactivity reads them, leaves out the routine ones, and tells you which app it was.</p></div><div class="card"><p class="eyebrow">After updates</p><h3>Did that update make it worse?</h3><p>Every macOS and app update of the last month, with the week before it beside the days after: &ldquo;Memory 1.2 GB &rarr; 1.6 GB since the update.&rdquo; Checkup tells you when one made something heavier.</p></div><div class="card"><p class="eyebrow">Build times</p><h3>Every build, timed.</h3><p>Xcode, Swift, Rust, Go, C and C++ builds timed by project from the compilers Mactivity sees, with a note when a project&#39;s builds get slower. Your coding agent can ask too, with <code>mactivity builds</code>.</p></div><div class="card"><p class="eyebrow">Compare</p><h3>Two days, side by side.</h3><p>Any two days or weeks: time in use, slowdowns, processor, memory, power, data and disk writes, and the apps that changed most between them.</p></div><div class="card"><p class="eyebrow">Your day</p><h3>Any day, told as it happened.</h3><p>Pick a day on the calendar and read it back: when your Mac woke and slept, the busy stretches and slowdowns with the apps behind them, when you unplugged, big downloads, alerts, crashes and your coding agents' sessions.</p></div><div class="card"><p class="eyebrow">Rewind</p><h3>The apps behind any moment.</h3><p>Click any bar in any history chart and the list beside it shows what was running then: the processor at 3 AM, the memory during last Tuesday's slowdown.</p></div><div class="card"><p class="eyebrow">Agent history</p><h3>What your agents did all week.</h3><p>Claude Code, Codex and the rest, remembered: how long each worked in each project, day by day, and what it cost in processor and memory.</p></div><div class="card"><p class="eyebrow">Why is my Mac slow?</p><h3>The answer, in one click.</h3><p>Mactivity watches for a few seconds and tells you, in plain words, what&#39;s slowing your Mac right now: an app hogging the processor, memory running short, heat, a full disk, or macOS itself busy with Spotlight, Time Machine, Photos or iCloud. Each cause comes with the fix. Missed the moment? It also lists the times in the last week your Mac struggled, and the apps that were busiest then.</p></div>
+<div class="card"><p class="eyebrow">Clean Keyboard</p><h3>⌃⌥K, then wipe.</h3><p>Every key stops working while you clean the keyboard, media and brightness keys included. Press ⌃⌥K again, click Unlock, or wait five minutes and it comes back on its own.</p></div><div class="card"><p class="eyebrow">Today so far</p><h3>Your day, on your desktop.</h3><p>A widget with the day on one line, from midnight to now: busy stretches, slowdowns, agent sessions, charging and alerts, refreshed every 15 minutes.</p></div><div class="card"><p class="eyebrow">Quick Search</p><h3>⌃⌥M, from anywhere.</h3><p>Or any keys you choose. Type an app, a process, or a port like <code>:3000</code>. Return shows it in Mactivity; ⌘⌫ quits it after asking. It&#39;s Spotlight for what your Mac is running.</p></div>
+<div class="card"><p class="eyebrow">Hotspot data watch</p><h3>Don&#39;t burn your phone&#39;s data plan.</h3><p>On your iPhone&#39;s hotspot, watch the data each app pulls down from the moment you connect, and get an alert when iCloud, Dropbox, or an update starts eating your plan.</p></div>
+<div class="card"><p class="eyebrow">Open but unused</p><h3>Apps you forgot were open.</h3><p>Apps you haven&#39;t touched in days that are still holding gigabytes of memory, with a Quit button for each.</p></div>
+<div class="card"><p class="eyebrow">Checkup</p><h3>What's worth doing.</h3><p>Everything Mactivity knows, as a short list: a disk filling up, battery health, an app that keeps crashing, memory running tight, broken startup items, idle dev servers. Each has a button to the screen that fixes it.</p></div>
+<div class="card"><p class="eyebrow">Security</p><h3>Who can do what on your Mac.</h3><p>FileVault, Gatekeeper, the firewall and automatic updates, on or off. Which apps can record your screen, read every file or control your Mac, what runs with the system&#39;s own privileges, and what each browser extension can reach. Read-only: every change is yours to make in System Settings or the browser.</p></div>
+<div class="card"><p class="eyebrow">Network interfaces</p><h3><code>ifconfig</code>, in plain words.</h3><p>Every connection on your Mac and what it&#39;s for: its addresses, router, DNS, speed and traffic, with a hover on each that says what it means. Nothing is sent anywhere.</p></div>
+<div class="card"><p class="eyebrow">Battery</p><h3>What used your battery, in watts.</h3><p>Which apps drained the battery while unplugged, the way iPhone breaks it down, and each app&#39;s watts, over any range from 12 hours to a year. See what your whole Mac drew on average and at its peak, how much you used and charged, your battery&#39;s health, and about when it reaches 80%.</p></div>
+<div class="card"><p class="eyebrow">Plain words</p><h3>Every figure explains itself.</h3><p>Hover over a figure to see what it means: why an internet plan&#39;s 100&nbsp;Mbps shows as about 12.5&nbsp;MB/s (bits against bytes), what watts and a charger&#39;s rating are, what a battery cycle counts, and what Wired or Compressed memory is. Power always reads in watts, the way chargers and Apple&#39;s specs put it.</p></div>
+<div class="card"><p class="eyebrow">Sleep</p><h3>Why your Mac won't sleep.</h3><p>Which apps are keeping your Mac awake right now, a week of when it slept, and what woke it each time, in plain words like "Lid opened". An alert if it stays up all night.</p></div>
+<div class="card"><p class="eyebrow">Alerts</p><h3>It tells you when something's off.</h3><p>An app hogging the CPU, growing past its usual memory, or hammering the disk or network; an app that keeps crashing; something new that starts with your Mac; AirPods running low; a disk that will be full in two weeks. The Alerts page opens on what went off, by day, and you set the thresholds.</p></div>
+<div class="card"><p class="eyebrow">Customize</p><h3>Your colors, your type.</h3><p>Three palettes for the metrics, one of them safe for color blindness, four typefaces for the big figures from rounded to serif, a weight from light to heavy, and compact spacing if you like it tight. Drag Overview&#39;s tiles and the menu bar window&#39;s rows into your own order, and hide the ones you don&#39;t use.</p></div>
+<div class="card"><p class="eyebrow">Devices</p><h3>Everything on your desk.</h3><p>Each display with its resolution, size, refresh rate and how it&#39;s connected, whether it&#39;s scaled, each port and what&#39;s on it, the USB and Thunderbolt devices plugged in, and whether the lid is closed. Your next Mac counts all of it.</p></div>
+<div class="card"><p class="eyebrow">Your next Mac</p><h3>Buy the Mac your work needs.</h3><p>Mactivity reads a week or a month of how you use this Mac, what gets maxed and when, and recommends the chip class, memory and storage for the next one, and which Mac: a MacBook Air or Pro, or a Mac mini or Studio if yours lives closed on a desk, with enough for every display you plug in. One page, saved as a PDF, with the evidence behind every line.</p></div>
+<div class="card"><p class="eyebrow">Your week</p><h3>Your week, in one picture.</h3><p>Time in use day by day, the apps you used most, sleep, data used, and crashes for the last seven days, with a Monday summary and an image to share. Plus a calendar of the whole year.</p></div>
+<div class="card"><p class="eyebrow">Storage</p><h3>Space, and what you can get back.</h3><p>A map of what's taking your disk, and how much you could free: old Messages photos and videos, iPhone and iPad backups, installers left in Downloads, Mail downloads, developer caches, and apps with the files they left behind. You see everything first; it all goes to the Trash, never deleted.</p></div>
+<div class="card"><p class="eyebrow">Sensors and accessories</p><h3>Heat, fans, and every battery.</h3><p>Readings from the CPU, GPU, battery and SSD sensors, how fast each fan spins, and the battery of your AirPods, mouse, keyboard, and trackpad over time: when each was charged and how long it lasts.</p></div>
+<div class="card"><p class="eyebrow">Startup and crashes</p><h3>What starts, and what fails.</h3><p>Login items, launch agents, and daemons by the app that installed them, with broken ones flagged, plus how long your Mac took to calm down after its last login and which apps kept it busy. Crashes and hangs per app, from your Mac's own reports.</p></div>
+<div class="card"><p class="eyebrow">Shortcuts, widgets, command line</p><h3>Your stats wherever you want them.</h3><p>Shortcuts actions for system stats, top apps, and dev servers, desktop widgets in three sizes, and a <code>mactivity</code> command with JSON output.</p></div>
+</div>
+</section>
+
+<section class="band center reveal">
+<h2>One app, many jobs.</h2>
+<p class="lead">The small tools you'd otherwise install one at a time, with the same history and the same rule: anything that stops or removes something asks first.</p>
+<ul class="chips">
+<li><i class="c-accent"></i>Why is my Mac slow?</li><li><i class="c-accent-2"></i>Quick Search (⌃⌥M)</li><li><i class="c-network"></i>Hotspot data watch</li><li><i class="c-memory"></i>Apps open but unused</li>
+<li><i class="c-cpu"></i>Activity by app</li><li><i class="c-cpu"></i>Menu bar stats</li><li><i class="c-memory"></i>Memory pressure</li>
+<li><i class="c-network"></i>Network per app</li><li><i class="c-gpu"></i>GPU per app</li><li><i class="c-disk"></i>Disk space map</li>
+<li><i class="c-disk"></i>Developer caches</li><li><i class="c-muted"></i>Login items</li><li><i class="c-muted"></i>Dev servers and ports</li>
+<li><i class="c-muted"></i>Docker containers</li><li><i class="c-battery"></i>Battery health</li><li><i class="c-battery"></i>AirPods and mouse batteries</li>
+<li><i class="c-gpu"></i>Temperatures and fans</li><li><i class="c-accent-2"></i>Per-app volume</li>
+<li><i class="c-accent"></i>Checkup</li><li><i class="c-battery"></i>Battery use by app</li><li><i class="c-accent-2"></i>Sleep and wake</li>
+<li><i class="c-muted"></i>Crashes and hangs</li><li><i class="c-accent"></i>Time in front</li><li><i class="c-disk"></i>App uninstaller</li><li><i class="c-disk"></i>Messages and backup cleanup</li>
+<li><i class="c-network"></i>Data used per app</li><li><i class="c-accent"></i>Displays, ports and devices</li><li><i class="c-accent-2"></i>Colors, type and spacing</li><li><i class="c-network"></i>Open ports and the firewall</li><li><i class="c-network"></i>Wi-Fi signal over time</li><li><i class="c-network"></i>Monthly data budget</li><li><i class="c-muted"></i>New startup items</li><li><i class="c-muted"></i>Who made what&#39;s running</li><li><i class="c-disk"></i>Space per project</li><li><i class="c-muted"></i>Build times</li><li><i class="c-disk"></i>Disk read and write totals</li><li><i class="c-accent"></i>Shortcuts, widgets, and a CLI</li><li><i class="c-accent-2"></i>11 languages</li>
+</ul>
+</section>
+
+<section class="band side">
+<div class="center"><p class="eyebrow">Mactivity next to Activity Monitor</p><h2>What the built-in tool leaves out.</h2></div>
+<table class="compare">
+<thead><tr><th></th><th>Activity Monitor</th><th>Mactivity</th></tr></thead>
+<tbody>
+<tr><td>Processes grouped under their app</td><td>—</td><td>✓</td></tr>
+<tr><td>History</td><td>While it's open</td><td>A year</td></tr>
+<tr><td>Warns you about a runaway app</td><td>—</td><td>✓</td></tr>
+<tr><td>Live stats in the menu bar</td><td>Dock icon only</td><td>Four displays</td></tr>
+<tr><td>Network speed per app</td><td>Totals only</td><td>✓</td></tr>
+<tr><td>Temperatures, fans, peripheral batteries</td><td>—</td><td>✓</td></tr>
+<tr><td>Dev servers, ports, and Docker</td><td>—</td><td>✓</td></tr>
+<tr><td>Disk map, login items, per-app volume</td><td>—</td><td>✓</td></tr>
+<tr><td>Battery use by app, like on iPhone</td><td>Energy only</td><td>✓</td></tr>
+<tr><td>Uninstall apps with their leftovers</td><td>—</td><td>✓</td></tr>
+<tr><td>Free space from Messages, backups, and Downloads</td><td>—</td><td>✓</td></tr>
+<tr><td>A list of what's worth doing</td><td>—</td><td>Checkup</td></tr>
+<tr><td>Why the Mac is slow, in plain words</td><td>—</td><td>One click</td></tr>
+<tr><td>Data used on your iPhone's hotspot</td><td>—</td><td>Per app, with alerts</td></tr>
+<tr><td>Displays, ports, and what's plugged in</td><td>—</td><td>✓</td></tr>
+<tr><td>Which ports other devices can reach</td><td>—</td><td>By app, with the firewall</td></tr>
+</tbody></table>
+</section>
+
+<section class="band faq side">
+<h2>Questions</h2>
+<div>
+<details><summary>What does it cost?</summary><p>Nothing. Mactivity is free, with no license key, no account and no subscription, and its source is <a href="https://github.com/Mactivity/mactivity">open under the MIT license</a>. If you bought a license before it became free, there is nothing to do: the app no longer asks for a key.</p></details>
+<details><summary>Will it work on my Mac?</summary><p>If your Mac has an M1 chip or newer and runs macOS 26 Tahoe or later, yes. Intel Macs aren’t supported.</p></details>
+<details><summary>Which languages does it speak?</summary><p>Chinese (Simplified and Traditional), Dutch, English, French, German, Italian, Japanese, Korean, Portuguese (Brazil) and Spanish. It switches to your Mac’s language by itself, and shows numbers, dates and temperatures the way your region writes them. The translations are new; if something reads oddly, <a href="https://github.com/Mactivity/mactivity/issues">open an issue</a>.</p></details>
+<details><summary>How much does Mactivity itself use?</summary><p>Very little. With only the menu bar icon showing, it takes a reading every 10 seconds, costing under 0.2% of one core and under 30 MB of memory, measured on an M5 Pro. With a window open it updates every 1, 2, or 5 seconds, your choice, and it samples half as often in Low Power Mode.</p></details>
+<details><summary>Does it need an administrator password?</summary><p>No. Everything works as your own user. An optional helper lets it also inspect other users' and system processes.</p></details>
+<details><summary>Could it close or delete something by mistake?</summary><p>Every action that ends a process or removes a file waits for your OK first. Files and uninstalled apps go to the Trash, so you can always put them back; Mactivity never erases anything itself.</p></details>
+<details><summary>What does it send over the network?</summary><p>An update check. Nothing else unless you turn on host-name lookups or the vulnerability check for Homebrew packages. <a href="/privacy">The details</a>.</p></details>
+<details><summary>How do I report a problem?</summary><p><a href="https://github.com/Mactivity/mactivity/issues">Open an issue on GitHub</a>. Mention your Mac model and macOS version, and what happened just before the problem.</p></details>
+</div>
+</section>
+
+<section class="band privacy">
+<div class="big">Your activity stays with you.</div>
+<p class="lead center">On its own, Mactivity only ever asks the internet one thing: is there an update. It looks up a host name, or has Homebrew check your packages for known vulnerabilities, only if you switch that on. There are no analytics, no accounts and no crash reporters.</p>
+<a class="button secondary" href="/privacy">See exactly what’s sent</a>
+</section>
+
+<section class="download" id="download">
+<img src="/icons/icon-512.png" alt="" width="96" height="96">
+<h2>Get Mactivity.</h2>
+<p class="lead center">Free, with no license key and no account. The source is open.</p>
+<a class="button" href="/download">Download Mactivity</a><a class="button secondary" href="https://github.com/Mactivity/mactivity">View the source</a>
+<p class="fine">For Macs with Apple silicon, macOS 26 or later. About 15 MB.</p>
+</section>
+
+</main>
+<footer><a href="/"><img src="/icons/mark-96.png" alt="">Mactivity</a><a href="/download">Download</a><a href="/roadmap">Roadmap</a><a href="/changelog">Changelog</a><a href="/privacy">Privacy</a><a href="https://github.com/Mactivity/mactivity">Source</a><span>Made for Macs with Apple silicon, macOS 26 or later.</span></footer>
+</body></html>

@@ -1,0 +1,185 @@
+{
+  "_comment": "IOPSGetPowerSourceDescription dictionaries and AppleSmartBattery properties (only the keys the sampler reads). acCharged is a real reading from a Mac17,9 (M5 Pro) on macOS 27.0: no top-level AppleRawMaxCapacity or DesignCapacity, so health comes from BatteryData (6522 / 6249 mAh = 104%, capped at 100). The other cases are built from it. expected is null where the result must be nil; timeRemainingMinutes, cycleCount, maxCapacityPercent, and powerDrawWatts are null where those fields must be nil.",
+  "packBatteryData": {
+    "Temperature": 2579,
+    "VirtualTemperature": 2579
+  },
+  "cases": {
+    "acCharged": {
+      "powerSource": {
+        "Power Source ID": 23199843,
+        "Name": "InternalBattery-0",
+        "Is Charged": 1,
+        "Battery Provides Time Remaining": 1,
+        "Current": 0,
+        "Current Capacity": 100,
+        "Time to Full Charge": 0,
+        "Max Capacity": 100,
+        "DesignCycleCount": 300,
+        "Time to Empty": 0,
+        "Type": "InternalBattery",
+        "LPM Active": 0,
+        "Power Source State": "AC Power",
+        "Is Charging": 0,
+        "Is Present": 1,
+        "Transport Type": "Internal"
+      },
+      "smartBattery": {
+        "CycleCount": 42,
+        "BatteryData": {
+          "AbsoluteCapacity": 0,
+          "AvgTimeToEmpty": 65535,
+          "BatteryPower": 0,
+          "CurrentCapacity": 100,
+          "DesignCapacity": 6249,
+          "FullChargeCapacity": 6370,
+          "FullyCharged": 1,
+          "MaxCapacity": 100,
+          "NominalChargeCapacity": 6522,
+          "RemainingCapacity": 6370,
+          "TrueRemainingCapacity": 0
+        },
+        "Amperage": 0,
+        "Voltage": 13221,
+        "PowerTelemetryData": { "BatteryPower": 0, "SystemLoad": 9027, "SystemPowerIn": 9027, "SystemVoltageIn": 19989 },
+        "AdapterDetails": { "AdapterVoltage": 20000, "Current": 4990, "Description": "pd charger", "Watts": 100 }
+      },
+      "expected": {
+        "percent": 100,
+        "isCharging": false,
+        "source": "ac",
+        "timeRemainingMinutes": null,
+        "cycleCount": 42,
+        "maxCapacityPercent": 100,
+        "powerDrawWatts": 0,
+        "systemLoadWatts": 9.027,
+        "adapterWatts": 100
+      }
+    },
+    "batteryDischarging": {
+      "powerSource": {
+        "Name": "InternalBattery-0",
+        "Current Capacity": 76,
+        "Max Capacity": 100,
+        "Time to Full Charge": -1,
+        "Time to Empty": 312,
+        "Type": "InternalBattery",
+        "Power Source State": "Battery Power",
+        "Is Charging": 0,
+        "Is Present": 1
+      },
+      "smartBattery": {
+        "CycleCount": 42,
+        "AppleRawMaxCapacity": 5999,
+        "DesignCapacity": 6249,
+        "Amperage": -1234,
+        "Voltage": 12400,
+        "PowerTelemetryData": { "BatteryPower": 15301, "SystemLoad": 15301, "SystemPowerIn": 0 },
+        "AdapterDetails": { "Watts": 100 }
+      },
+      "expected": {
+        "percent": 76,
+        "isCharging": false,
+        "source": "battery",
+        "timeRemainingMinutes": 312,
+        "cycleCount": 42,
+        "maxCapacityPercent": 95.99935989758361,
+        "powerDrawWatts": 15.3016,
+        "systemLoadWatts": 15.301
+      }
+    },
+    "acCharging": {
+      "powerSource": {
+        "Name": "InternalBattery-0",
+        "Current Capacity": 55,
+        "Max Capacity": 100,
+        "Time to Full Charge": 48,
+        "Time to Empty": 0,
+        "Type": "InternalBattery",
+        "Power Source State": "AC Power",
+        "Is Charging": 1,
+        "Is Present": 1
+      },
+      "smartBattery": {
+        "CycleCount": 43,
+        "BatteryData": { "DesignCapacity": 6249, "NominalChargeCapacity": 6187 },
+        "Amperage": 3000,
+        "Voltage": 12900
+      },
+      "expected": {
+        "percent": 55,
+        "isCharging": true,
+        "source": "ac",
+        "timeRemainingMinutes": 48,
+        "cycleCount": 43,
+        "maxCapacityPercent": 99.00784125460074,
+        "powerDrawWatts": 0
+      }
+    },
+    "batteryEstimating": {
+      "powerSource": {
+        "Current Capacity": 4012,
+        "Max Capacity": 6013,
+        "Time to Empty": -1,
+        "Type": "InternalBattery",
+        "Power Source State": "Battery Power",
+        "Is Charging": 0,
+        "Is Present": 1
+      },
+      "smartBattery": null,
+      "expected": {
+        "percent": 66.72210211209047,
+        "isCharging": false,
+        "source": "battery",
+        "timeRemainingMinutes": null,
+        "cycleCount": null,
+        "maxCapacityPercent": null,
+        "powerDrawWatts": null
+      }
+    },
+    "designCapacityZero": {
+      "powerSource": {
+        "Current Capacity": 50,
+        "Max Capacity": 100,
+        "Time to Empty": 90,
+        "Type": "InternalBattery",
+        "Power Source State": "Battery Power",
+        "Is Charging": 0,
+        "Is Present": 1
+      },
+      "smartBattery": { "CycleCount": 7, "AppleRawMaxCapacity": 5000, "DesignCapacity": 0, "Amperage": -500, "Voltage": 12000 },
+      "expected": {
+        "percent": 50,
+        "isCharging": false,
+        "source": "battery",
+        "timeRemainingMinutes": 90,
+        "cycleCount": 7,
+        "maxCapacityPercent": null,
+        "powerDrawWatts": 6
+      }
+    },
+    "ups": {
+      "powerSource": {
+        "Name": "Back-UPS 600",
+        "Current Capacity": 100,
+        "Max Capacity": 100,
+        "Type": "UPS",
+        "Power Source State": "AC Power",
+        "Is Present": 1
+      },
+      "smartBattery": null,
+      "expected": null
+    },
+    "removed": {
+      "powerSource": {
+        "Current Capacity": 0,
+        "Max Capacity": 100,
+        "Type": "InternalBattery",
+        "Power Source State": "AC Power",
+        "Is Present": 0
+      },
+      "smartBattery": null,
+      "expected": null
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_comment": "Per-app output routing over time, one app per timeline. Each step is the output devices after an event (plug, unplug, default change) and the tap action TapPlanner must take, given the tap left by the previous step. 'none', 'remove', 'install' and 'move' carry the device and gain the tap ends up with. Device UIDs are opaque strings, as Core Audio's are.",
+  "timelines": [
+    {
+      "name": "Sent to AirPods at 100%: unplugged falls back with no tap, replugged returns",
+      "setting": {"volume": 1, "isMuted": false, "outputDeviceUID": "airpods"},
+      "steps": [
+        {"event": "AirPods connected, speakers are the default", "defaultUID": "speakers", "available": ["speakers", "airpods"], "action": "install", "deviceUID": "airpods", "gain": 1},
+        {"event": "Display added; default unchanged", "defaultUID": "speakers", "available": ["speakers", "airpods", "display"], "action": "none", "deviceUID": "airpods", "gain": 1},
+        {"event": "AirPods unplugged: the app falls back to the default, and at 100% that needs no tap", "defaultUID": "speakers", "available": ["speakers", "display"], "action": "remove"},
+        {"event": "Default switches to the display while the AirPods are away", "defaultUID": "display", "available": ["speakers", "display"], "action": "none"},
+        {"event": "AirPods back: the app returns to them", "defaultUID": "display", "available": ["speakers", "display", "airpods"], "action": "install", "deviceUID": "airpods", "gain": 1},
+        {"event": "The AirPods become the default: 100% on the default needs no tap", "defaultUID": "airpods", "available": ["speakers", "display", "airpods"], "action": "remove"},
+        {"event": "Default back to the speakers: the app keeps its AirPods", "defaultUID": "speakers", "available": ["speakers", "display", "airpods"], "action": "install", "deviceUID": "airpods", "gain": 1}
+      ]
+    },
+    {
+      "name": "Sent to AirPods at 40%: unplugged moves the tap to the default, replugged moves it back",
+      "setting": {"volume": 0.4, "isMuted": false, "outputDeviceUID": "airpods"},
+      "steps": [
+        {"event": "AirPods connected", "defaultUID": "speakers", "available": ["speakers", "airpods"], "action": "install", "deviceUID": "airpods", "gain": 0.4},
+        {"event": "Default changes to the display: a chosen device doesn't follow it", "defaultUID": "display", "available": ["speakers", "airpods", "display"], "action": "none", "deviceUID": "airpods", "gain": 0.4},
+        {"event": "AirPods unplugged", "defaultUID": "display", "available": ["speakers", "display"], "action": "move", "deviceUID": "display", "gain": 0.4},
+        {"event": "Default changes while fallen back: the fallback follows it", "defaultUID": "speakers", "available": ["speakers", "display"], "action": "move", "deviceUID": "speakers", "gain": 0.4},
+        {"event": "AirPods back", "defaultUID": "speakers", "available": ["speakers", "display", "airpods"], "action": "move", "deviceUID": "airpods", "gain": 0.4}
+      ]
+    },
+    {
+      "name": "System default, muted: the tap follows every default change",
+      "setting": {"volume": 0.7, "isMuted": true},
+      "steps": [
+        {"event": "Speakers", "defaultUID": "speakers", "available": ["speakers", "airpods"], "action": "install", "deviceUID": "speakers", "gain": 0},
+        {"event": "AirPods become the default", "defaultUID": "airpods", "available": ["speakers", "airpods"], "action": "move", "deviceUID": "airpods", "gain": 0},
+        {"event": "AirPods unplugged; macOS picks the speakers", "defaultUID": "speakers", "available": ["speakers"], "action": "move", "deviceUID": "speakers", "gain": 0},
+        {"event": "Nothing changed", "defaultUID": "speakers", "available": ["speakers"], "action": "none", "deviceUID": "speakers", "gain": 0}
+      ]
+    },
+    {
+      "name": "A chosen device that never connects: plays on the default, untouched at 100%",
+      "setting": {"volume": 1, "isMuted": false, "outputDeviceUID": "usb-dac"},
+      "steps": [
+        {"event": "No DAC", "defaultUID": "speakers", "available": ["speakers"], "action": "none"},
+        {"event": "Still no DAC after a default change", "defaultUID": "airpods", "available": ["speakers", "airpods"], "action": "none"}
+      ]
+    }
+  ]
+}

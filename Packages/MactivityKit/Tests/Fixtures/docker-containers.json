@@ -1,0 +1,73 @@
+[
+  {
+    "Id": "4f2a9c1e8b7d6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a19",
+    "Names": ["/storefront-web-db-1"],
+    "Image": "postgres:16-alpine",
+    "ImageID": "sha256:9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0a9b8c",
+    "Command": "docker-entrypoint.sh postgres",
+    "Created": 1758790000,
+    "Ports": [
+      {"IP": "0.0.0.0", "PrivatePort": 5432, "PublicPort": 5432, "Type": "tcp"},
+      {"IP": "::", "PrivatePort": 5432, "PublicPort": 5432, "Type": "tcp"}
+    ],
+    "Labels": {
+      "com.docker.compose.project": "storefront-web",
+      "com.docker.compose.service": "db",
+      "com.docker.compose.project.working_dir": "/Users/demo/Developer/storefront-web",
+      "com.docker.compose.project.config_files": "/Users/demo/Developer/storefront-web/compose.yaml"
+    },
+    "State": "running",
+    "Status": "Up 3 hours (healthy)",
+    "HostConfig": {"NetworkMode": "storefront-web_default"},
+    "Mounts": []
+  },
+  {
+    "Id": "7c3e5a1b9d8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a4f3e2d",
+    "Names": ["/storefront-web-redis-1"],
+    "Image": "redis:7",
+    "Command": "docker-entrypoint.sh redis-server",
+    "Created": 1758790001,
+    "Ports": [
+      {"IP": "127.0.0.1", "PrivatePort": 6379, "PublicPort": 6379, "Type": "tcp"}
+    ],
+    "Labels": {
+      "com.docker.compose.project": "storefront-web",
+      "com.docker.compose.service": "redis",
+      "com.docker.compose.project.working_dir": "/Users/demo/Developer/storefront-web"
+    },
+    "State": "running",
+    "Status": "Up 3 hours"
+  },
+  {
+    "Id": "a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90",
+    "Names": ["/api-worker-1"],
+    "Image": "api-worker:dev",
+    "Command": "python -m worker",
+    "Created": 1758700000,
+    "Ports": [
+      {"PrivatePort": 8080, "Type": "tcp"}
+    ],
+    "Labels": {
+      "com.docker.compose.project": "api",
+      "com.docker.compose.service": "worker",
+      "com.docker.compose.project.working_dir": "/Users/demo/Developer/api"
+    },
+    "State": "exited",
+    "Status": "Exited (1) 40 minutes ago"
+  },
+  {
+    "Id": "e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8",
+    "Names": ["/minio"],
+    "Image": "minio/minio:latest",
+    "Command": "/usr/bin/docker-entrypoint.sh server /data --console-address :9001",
+    "Created": 1758400000,
+    "Ports": [
+      {"IP": "0.0.0.0", "PrivatePort": 9001, "PublicPort": 9001, "Type": "tcp"},
+      {"IP": "0.0.0.0", "PrivatePort": 9000, "PublicPort": 9000, "Type": "tcp"},
+      {"IP": "::", "PrivatePort": 9000, "PublicPort": 9000, "Type": "tcp"}
+    ],
+    "Labels": {},
+    "State": "running",
+    "Status": "Up 5 days"
+  }
+]

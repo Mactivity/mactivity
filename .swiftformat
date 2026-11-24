@@ -1,0 +1,17 @@
+--swiftversion 6.2
+--languagemode 5
+--exclude build,Packages/MactivityKit/.build,Mactivity.xcodeproj,.claude
+--indent 4
+--maxwidth 140
+--wraparguments before-first
+--wrapparameters before-first
+--wrapcollections before-first
+--closingparen balanced
+--trailing-commas collections-only
+--stripunusedargs closure-only
+--self remove
+--importgrouping alpha
+--header ignore
+--ifdef indent
+--disable wrapMultilineStatementBraces,redundantReturn,preferKeyPath,blankLinesAtStartOfScope,blankLinesAtEndOfScope,redundantProperty,swiftTestingTestCaseNames,extensionAccessControl
+--selfrequired log,debug,info,notice,warning,trace,error,critical,fault

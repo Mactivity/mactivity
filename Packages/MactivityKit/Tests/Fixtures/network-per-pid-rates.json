@@ -1,0 +1,37 @@
+{
+  "_comment": "Two process passes 10 s apart, as SnapshotSampler sees them while idle. PIDs, names and uids are from a Mac17,9 (M5 Pro) on macOS 27.0; the byte counts are shaped from a real NetworkStatistics query. The app runs as uid 501, so only uid 501 processes get a rate. claude: steady traffic. Claude Helper: a connection closed between the passes; the monitor's ledger keeps its bytes, so the cumulative figure still only grows. identityservicesd: no sockets at all now (absent from current), so 0. rapportd: rx went backwards (a restarted count), so rx is 0 for this pass while tx still has a rate. ControlCenter: PID 659 now belongs to a different process (new start time), so 0. swift-frontend: first sight, so 0. mDNSResponder runs as _mdnsresponder (uid 65): its sockets aren't visible, so no rate at all.",
+  "elapsedSeconds": 10.0,
+  "visibleUID": 501,
+  "processes": [
+    { "pid": 34963, "name": "claude", "uid": 501, "startTime": 1790000000 },
+    { "pid": 29296, "name": "Claude Helper", "uid": 501, "startTime": 1790000100 },
+    { "pid": 714, "name": "identityservicesd", "uid": 501, "startTime": 1789990000 },
+    { "pid": 666, "name": "rapportd", "uid": 501, "startTime": 1789990000 },
+    { "pid": 659, "name": "ControlCenter", "uid": 501, "startTime": 1790005000 },
+    { "pid": 85761, "name": "swift-frontend", "uid": 501, "startTime": 1790009995 },
+    { "pid": 484, "name": "mDNSResponder", "uid": 65, "startTime": 1789980000 }
+  ],
+  "previous": {
+    "34963": { "startTime": 1790000000, "rx": 30238242, "tx": 87178876 },
+    "29296": { "startTime": 1790000100, "rx": 28214949, "tx": 9906993 },
+    "714": { "startTime": 1789990000, "rx": 0, "tx": 0 },
+    "666": { "startTime": 1789990000, "rx": 785887, "tx": 14758641 },
+    "659": { "startTime": 1789990000, "rx": 120000, "tx": 64000 }
+  },
+  "current": {
+    "34963": { "rx": 35238242, "tx": 88178876 },
+    "29296": { "rx": 28476475, "tx": 9907582 },
+    "666": { "rx": 1000, "tx": 14768641 },
+    "659": { "rx": 4096, "tx": 2048 },
+    "85761": { "rx": 900000, "tx": 3000 },
+    "484": { "rx": 681333040, "tx": 144303068 }
+  },
+  "expected": {
+    "34963": { "inBPS": 500000, "outBPS": 100000 },
+    "29296": { "inBPS": 26152.6, "outBPS": 58.9 },
+    "714": { "inBPS": 0, "outBPS": 0 },
+    "666": { "inBPS": 0, "outBPS": 1000 },
+    "659": { "inBPS": 0, "outBPS": 0 },
+    "85761": { "inBPS": 0, "outBPS": 0 }
+  }
+}

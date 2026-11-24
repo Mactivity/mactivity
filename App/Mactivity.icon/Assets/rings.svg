@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Back layer: three gauge arcs (CPU, memory, disk), open at the bottom like a dial. -->
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
+    <path d="M 262 704 A 300 300 0 1 1 762 704" stroke-width="56" stroke-opacity="0.30"/>
+    <path d="M 332 654 A 214 214 0 1 1 692 654" stroke-width="52" stroke-opacity="0.45"/>
+    <path d="M 404 606 A 128 128 0 1 1 620 606" stroke-width="48" stroke-opacity="0.60"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+# Cloudflare headers (D-076, D-081). Scripts: only the site's own, plus Cloudflare Web Analytics
+# (cookieless, website visits only; the app itself never reports anything).
+/*
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: interest-cohort=(), browsing-topics=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Installers never change once published (each version has its own file name).
+/download/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# …but /download/latest is a redirect that moves with every release: never cache it for long.
+/download/latest
+  ! Cache-Control
+  Cache-Control: public, max-age=300
+
+# Sparkle's feed must be fresh so updates show up promptly.
+/appcast.xml
+  Cache-Control: public, max-age=300

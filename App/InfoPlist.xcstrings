@@ -1,0 +1,716 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        }
+      }
+    },
+    "CFBundleName" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity"
+          }
+        }
+      }
+    },
+    "NSAudioCaptureUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity greift nur auf den Ton einer App zu, um ihre Lautstärke zu ändern, wenn du ihren Regler bewegst. Es wird nichts aufgenommen oder gespeichert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity listens to an app's audio only to change its volume when you move its slider. Nothing is recorded or stored."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity escucha el audio de una app solo para cambiar su volumen cuando mueves su regulador. No se graba ni se guarda nada."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity n’écoute l’audio d’une app que pour en modifier le volume lorsque vous déplacez son curseur. Rien n’est enregistré ni conservé."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity ascolta l'audio di un'app solo per cambiarne il volume quando sposti il cursore. Non viene registrato né salvato nulla."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivityは、スライダでアプリの音量を変更するときにのみ、そのアプリのオーディオを取得します。録音や保存は一切行いません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity는 슬라이더를 움직여 앱의 음량을 변경할 때만 해당 앱의 오디오를 수신합니다. 녹음하거나 저장하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity luistert alleen naar de audio van een app om het volume te wijzigen wanneer je de schuifknop ervan verplaatst. Er wordt niets opgenomen of bewaard."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mactivity ouve o áudio de um app apenas para alterar o volume quando você move o controle dele. Nada é gravado nem armazenado."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 仅在你移动某个 App 的音量滑块时监听其音频，以便调整音量。不会录制或存储任何内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 只會在你移動某個 App 的音量滑桿時監聽其音訊，以便調整音量。不會錄製或儲存任何內容。"
+          }
+        }
+      }
+    },
+    "NSBluetoothAlwaysUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity liest den Batteriestand deiner AirPods und anderer Bluetooth-Geräte. Es verbindet sich nicht mit ihnen und ändert nichts daran."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity reads the battery level of your AirPods and other Bluetooth accessories. It doesn't connect to or change them."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity lee el nivel de batería de tus AirPods y otros accesorios Bluetooth. No se conecta a ellos ni los modifica."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity lit le niveau de batterie de vos AirPods et autres accessoires Bluetooth. Il ne s’y connecte pas et ne les modifie pas."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity legge il livello della batteria degli AirPods e di altri accessori Bluetooth. Non si connette a essi né li modifica."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MactivityはAirPodsやその他のBluetoothアクセサリのバッテリー残量を読み取ります。アクセサリへの接続や変更は行いません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity는 AirPods 및 기타 Bluetooth 액세서리의 배터리 잔량을 읽습니다. 액세서리에 연결하거나 액세서리를 변경하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity leest het batterijniveau van je AirPods en andere Bluetooth-accessoires. Het maakt er geen verbinding mee en wijzigt ze niet."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mactivity lê o nível de bateria dos seus AirPods e de outros acessórios Bluetooth. Ele não se conecta a eles nem os altera."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 会读取 AirPods 和其他蓝牙配件的电池电量，但不会连接或更改这些配件。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 會讀取 AirPods 和其他藍牙配件的電池電量，但不會連線或更改這些配件。"
+          }
+        }
+      }
+    },
+    "NSDesktopFolderUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misst, wie viel Platz die Dateien auf deinem Schreibtisch belegen. Ihr Inhalt wird weder gelesen noch geändert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity measures how much space the files on your Desktop take up. It doesn't read or change their contents."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mide cuánto espacio ocupan los archivos de tu escritorio. No lee ni modifica su contenido."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mesure l’espace occupé par les fichiers de votre bureau. Il n’en lit ni n’en modifie le contenu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misura quanto spazio occupano i file sulla scrivania. Non ne legge né modifica il contenuto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivityはデスクトップ上のファイルが使用している容量を測定します。ファイルの内容の読み取りや変更は行いません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity는 데스크탑에 있는 파일이 차지하는 공간을 측정합니다. 파일 내용을 읽거나 변경하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity meet hoeveel ruimte de bestanden op je bureaublad innemen. Het leest of wijzigt de inhoud ervan niet."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mactivity mede quanto espaço os arquivos da sua Mesa ocupam. Ele não lê nem altera o conteúdo deles."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 会计算“桌面”上的文件所占用的空间，但不会读取或更改其内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 會計算「桌面」上的檔案所佔用的空間，但不會讀取或更改其內容。"
+          }
+        }
+      }
+    },
+    "NSDocumentsFolderUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misst, wie viel Platz deine Dokumente belegen. Ihr Inhalt wird weder gelesen noch geändert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity measures how much space your Documents take up. It doesn't read or change their contents."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mide cuánto espacio ocupa tu carpeta Documentos. No lee ni modifica su contenido."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mesure l’espace occupé par vos documents. Il n’en lit ni n’en modifie le contenu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misura quanto spazio occupa la cartella Documenti. Non ne legge né modifica il contenuto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivityは“書類”フォルダが使用している容量を測定します。ファイルの内容の読み取りや変更は行いません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity는 문서 폴더가 차지하는 공간을 측정합니다. 파일 내용을 읽거나 변경하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity meet hoeveel ruimte je documenten innemen. Het leest of wijzigt de inhoud ervan niet."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mactivity mede quanto espaço seus Documentos ocupam. Ele não lê nem altera o conteúdo deles."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 会计算“文稿”所占用的空间，但不会读取或更改其内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 會計算「文件」所佔用的空間，但不會讀取或更改其內容。"
+          }
+        }
+      }
+    },
+    "NSDownloadsFolderUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misst, wie viel Platz deine Downloads belegen. Ihr Inhalt wird weder gelesen noch geändert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity measures how much space your Downloads take up. It doesn't read or change their contents."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mide cuánto espacio ocupa tu carpeta Descargas. No lee ni modifica su contenido."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mesure l’espace occupé par vos téléchargements. Il n’en lit ni n’en modifie le contenu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misura quanto spazio occupa la cartella Download. Non ne legge né modifica il contenuto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivityは“ダウンロード”フォルダが使用している容量を測定します。ファイルの内容の読み取りや変更は行いません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity는 다운로드 폴더가 차지하는 공간을 측정합니다. 파일 내용을 읽거나 변경하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity meet hoeveel ruimte je downloads innemen. Het leest of wijzigt de inhoud ervan niet."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mactivity mede quanto espaço seus Downloads ocupam. Ele não lê nem altera o conteúdo deles."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 会计算“下载”所占用的空间，但不会读取或更改其内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 會計算「下載項目」所佔用的空間，但不會讀取或更改其內容。"
+          }
+        }
+      }
+    },
+    "NSHumanReadableCopyright" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Kade Clifton"
+          }
+        }
+      }
+    },
+    "NSNetworkVolumesUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misst, wie viel Platz auf dem ausgewählten Netzwerkvolume belegt ist. Dateiinhalte werden weder gelesen noch geändert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity measures how much space is used on the network volume you chose. It doesn't read or change file contents."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mide cuánto espacio se usa en el volumen de red que has elegido. No lee ni modifica el contenido de los archivos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mesure l’espace utilisé sur le volume réseau que vous avez choisi. Il ne lit ni ne modifie le contenu des fichiers."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misura quanto spazio è utilizzato sul volume di rete che hai scelto. Non legge né modifica il contenuto dei file."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivityは選択したネットワークボリュームの使用容量を測定します。ファイルの内容の読み取りや変更は行いません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity는 선택한 네트워크 볼륨의 사용 공간을 측정합니다. 파일 내용을 읽거나 변경하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity meet hoeveel ruimte er in gebruik is op het netwerkvolume dat je hebt gekozen. Het leest of wijzigt de inhoud van bestanden niet."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mactivity mede quanto espaço está sendo usado no volume de rede que você escolheu. Ele não lê nem altera o conteúdo dos arquivos."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 会计算你所选网络宗卷的已用空间，但不会读取或更改文件内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 會計算你所選網路卷宗的已使用空間，但不會讀取或更改檔案內容。"
+          }
+        }
+      }
+    },
+    "NSRemovableVolumesUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misst, wie viel Platz auf dem ausgewählten Laufwerk belegt ist. Dateiinhalte werden weder gelesen noch geändert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mactivity measures how much space is used on the drive you chose. It doesn't read or change file contents."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mide cuánto espacio se usa en la unidad que has elegido. No lee ni modifica el contenido de los archivos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity mesure l’espace utilisé sur le disque que vous avez choisi. Il ne lit ni ne modifie le contenu des fichiers."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity misura quanto spazio è utilizzato sull'unità che hai scelto. Non legge né modifica il contenuto dei file."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivityは選択したドライブの使用容量を測定します。ファイルの内容の読み取りや変更は行いません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity는 선택한 드라이브의 사용 공간을 측정합니다. 파일 내용을 읽거나 변경하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity meet hoeveel ruimte er in gebruik is op de schijf die je hebt gekozen. Het leest of wijzigt de inhoud van bestanden niet."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Mactivity mede quanto espaço está sendo usado na unidade que você escolheu. Ele não lê nem altera o conteúdo dos arquivos."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 会计算你所选驱动器的已用空间，但不会读取或更改文件内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mactivity 會計算你所選磁碟的已使用空間，但不會讀取或更改檔案內容。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,197 @@
+{
+  "_comment": "Two host_processor_info readings, 15 cores laid out like an M5 Pro (Performance cores 0-9, Super cores 10-14). Deltas are chosen so every figure is exact: Performance cores 30% user / 10% system, Super cores 5% / 5%. Total 30%, user 21.67%, system 8.33%.",
+  "perfLevels": [
+    {
+      "name": "Super",
+      "count": 5
+    },
+    {
+      "name": "Performance",
+      "count": 10
+    }
+  ],
+  "previous": [
+    {
+      "user": 22732048,
+      "system": 6061658,
+      "idle": 62992312,
+      "nice": 666
+    },
+    {
+      "user": 4240447,
+      "system": 3430558,
+      "idle": 81924865,
+      "nice": 96
+    },
+    {
+      "user": 25540967,
+      "system": 2946120,
+      "idle": 78106871,
+      "nice": 219
+    },
+    {
+      "user": 3516291,
+      "system": 3883910,
+      "idle": 68202938,
+      "nice": 428
+    },
+    {
+      "user": 5687918,
+      "system": 9075310,
+      "idle": 22175294,
+      "nice": 564
+    },
+    {
+      "user": 29489000,
+      "system": 2983419,
+      "idle": 85893910,
+      "nice": 126
+    },
+    {
+      "user": 15981313,
+      "system": 3075745,
+      "idle": 87457446,
+      "nice": 599
+    },
+    {
+      "user": 27620776,
+      "system": 2663941,
+      "idle": 39673100,
+      "nice": 47
+    },
+    {
+      "user": 38357148,
+      "system": 5468605,
+      "idle": 48870700,
+      "nice": 429
+    },
+    {
+      "user": 10680794,
+      "system": 19142407,
+      "idle": 25809806,
+      "nice": 584
+    },
+    {
+      "user": 21701864,
+      "system": 19799114,
+      "idle": 34256684,
+      "nice": 105
+    },
+    {
+      "user": 40030526,
+      "system": 7303905,
+      "idle": 59982352,
+      "nice": 99
+    },
+    {
+      "user": 37758508,
+      "system": 3106848,
+      "idle": 85748230,
+      "nice": 61
+    },
+    {
+      "user": 42541030,
+      "system": 7910827,
+      "idle": 76627625,
+      "nice": 696
+    },
+    {
+      "user": 36683141,
+      "system": 15347616,
+      "idle": 52164119,
+      "nice": 476
+    }
+  ],
+  "current": [
+    {
+      "user": 22732076,
+      "system": 6061668,
+      "idle": 62992372,
+      "nice": 668
+    },
+    {
+      "user": 4240475,
+      "system": 3430568,
+      "idle": 81924925,
+      "nice": 98
+    },
+    {
+      "user": 25540995,
+      "system": 2946130,
+      "idle": 78106931,
+      "nice": 221
+    },
+    {
+      "user": 3516319,
+      "system": 3883920,
+      "idle": 68202998,
+      "nice": 430
+    },
+    {
+      "user": 5687946,
+      "system": 9075320,
+      "idle": 22175354,
+      "nice": 566
+    },
+    {
+      "user": 29489028,
+      "system": 2983429,
+      "idle": 85893970,
+      "nice": 128
+    },
+    {
+      "user": 15981341,
+      "system": 3075755,
+      "idle": 87457506,
+      "nice": 601
+    },
+    {
+      "user": 27620804,
+      "system": 2663951,
+      "idle": 39673160,
+      "nice": 49
+    },
+    {
+      "user": 38357176,
+      "system": 5468615,
+      "idle": 48870760,
+      "nice": 431
+    },
+    {
+      "user": 10680822,
+      "system": 19142417,
+      "idle": 25809866,
+      "nice": 586
+    },
+    {
+      "user": 21701869,
+      "system": 19799119,
+      "idle": 34256774,
+      "nice": 105
+    },
+    {
+      "user": 40030531,
+      "system": 7303910,
+      "idle": 59982442,
+      "nice": 99
+    },
+    {
+      "user": 37758513,
+      "system": 3106853,
+      "idle": 85748320,
+      "nice": 61
+    },
+    {
+      "user": 42541035,
+      "system": 7910832,
+      "idle": 76627715,
+      "nice": 696
+    },
+    {
+      "user": 36683146,
+      "system": 15347621,
+      "idle": 52164209,
+      "nice": 476
+    }
+  ]
+}

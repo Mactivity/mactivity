@@ -1,0 +1,31 @@
+# Generated
+Mactivity.xcodeproj/
+build/
+DerivedData/
+Packages/MactivityKit/.build/
+Packages/MactivityKit/.swiftpm/
+*.xcuserstate
+xcuserdata/
+
+# macOS
+.DS_Store
+
+# Secrets never live in the repo (Sparkle EdDSA private key, notarization credentials)
+*.p8
+*.p12
+.env
+
+# Claude Code local state and agent worktrees
+.claude/
+dist/
+.wrangler/
+tools/site/node_modules/
+
+# Private working notes (decisions, status, plans, audits): local only
+docs/private/
+
+# Python bytecode
+__pycache__/
+
+# Marketing collateral from make media (screenshots, clips, cards): local only, never on GitHub
+MarketingCollateral/

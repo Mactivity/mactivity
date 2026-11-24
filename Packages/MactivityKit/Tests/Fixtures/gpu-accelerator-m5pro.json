@@ -1,0 +1,162 @@
+{
+  "_comment": "Captured from a Mac17,9 (M5 Pro) on macOS 27.0 with ioreg -r -c IOAccelerator -l -a: the AGXAcceleratorG17X PerformanceStatistics and a subset of its AGXDeviceUserClient children (every WindowServer client, then the first 12 others). expectedGPUTime is the per-PID sum of accumulatedGPUTime.",
+  "model": "Apple M5 Pro",
+  "performanceStatistics": {
+    "Alloc system memory": 9608527872,
+    "Allocated PB Size": 124256256,
+    "Device Utilization %": 57,
+    "In use system memory": 23396352,
+    "In use system memory (driver)": 0,
+    "Renderer Utilization %": 56,
+    "SplitSceneCount": 0,
+    "TiledSceneBytes": 2228224,
+    "Tiler Utilization %": 49,
+    "lastRecoveryTime": 0,
+    "recoveryCount": 0
+  },
+  "clients": [
+    {
+      "IOUserClientCreator": "pid 410, WindowServer",
+      "AppUsage": []
+    },
+    {
+      "IOUserClientCreator": "pid 410, WindowServer",
+      "AppUsage": [
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 15389780790541,
+          "lastSubmittedTime": 477019593341541
+        },
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 578053375,
+          "lastSubmittedTime": 477018591741291
+        },
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 3854456500,
+          "lastSubmittedTime": 476764843226541
+        },
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 0,
+          "lastSubmittedTime": 0
+        }
+      ]
+    },
+    {
+      "IOUserClientCreator": "pid 710, Siri AI",
+      "AppUsage": [
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 55314208,
+          "lastSubmittedTime": 359382894015000
+        },
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 3160958,
+          "lastSubmittedTime": 386987128577250
+        }
+      ]
+    },
+    {
+      "IOUserClientCreator": "pid 659, ControlCenter",
+      "AppUsage": [
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 10179787250,
+          "lastSubmittedTime": 476993483080416
+        }
+      ]
+    },
+    {
+      "IOUserClientCreator": "pid 665, MenuBarAgent",
+      "AppUsage": []
+    },
+    {
+      "IOUserClientCreator": "pid 688, AccessibilityVis",
+      "AppUsage": []
+    },
+    {
+      "IOUserClientCreator": "pid 415, runningboardd",
+      "AppUsage": []
+    },
+    {
+      "IOUserClientCreator": "pid 795, NotificationCent",
+      "AppUsage": [
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 891984541,
+          "lastSubmittedTime": 299503299296666
+        }
+      ]
+    },
+    {
+      "IOUserClientCreator": "pid 694, iconservicesagen",
+      "AppUsage": [
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 243414083,
+          "lastSubmittedTime": 467136147344833
+        }
+      ]
+    },
+    {
+      "IOUserClientCreator": "pid 824, avconferenced",
+      "AppUsage": []
+    },
+    {
+      "IOUserClientCreator": "pid 750, mediaanalysisd",
+      "AppUsage": [
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 41744458,
+          "lastSubmittedTime": 470214186811375
+        },
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 2568125,
+          "lastSubmittedTime": 408333719596458
+        }
+      ]
+    },
+    {
+      "IOUserClientCreator": "pid 884, TextInputMenuAge",
+      "AppUsage": []
+    },
+    {
+      "IOUserClientCreator": "pid 413, loginwindow",
+      "AppUsage": [
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 0,
+          "lastSubmittedTime": 0
+        },
+        {
+          "API": "Metal",
+          "accumulatedGPUTime": 25589316250,
+          "lastSubmittedTime": 477160276603541
+        }
+      ]
+    },
+    {
+      "IOUserClientCreator": "pid 921, CursorUIViewServ",
+      "AppUsage": []
+    }
+  ],
+  "expectedGPUTime": {
+    "410": 15394213300416,
+    "710": 58475166,
+    "659": 10179787250,
+    "665": 0,
+    "688": 0,
+    "415": 0,
+    "795": 891984541,
+    "694": 243414083,
+    "824": 0,
+    "750": 44312583,
+    "884": 0,
+    "413": 25589316250,
+    "921": 0
+  }
+}

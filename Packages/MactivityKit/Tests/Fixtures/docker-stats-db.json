@@ -1,0 +1,37 @@
+{
+  "read": "2026-09-25T12:00:01.000000000Z",
+  "preread": "2026-09-25T12:00:00.000000000Z",
+  "name": "/storefront-web-db-1",
+  "id": "4f2a9c1e8b7d6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a19",
+  "num_procs": 0,
+  "pids_stats": {"current": 7, "limit": 9223372036854775807},
+  "cpu_stats": {
+    "cpu_usage": {"total_usage": 2000000000, "usage_in_kernelmode": 400000000, "usage_in_usermode": 1600000000},
+    "system_cpu_usage": 90000000000,
+    "online_cpus": 8,
+    "throttling_data": {"periods": 0, "throttled_periods": 0, "throttled_time": 0}
+  },
+  "precpu_stats": {
+    "cpu_usage": {"total_usage": 1800000000, "usage_in_kernelmode": 360000000, "usage_in_usermode": 1440000000},
+    "system_cpu_usage": 82000000000,
+    "online_cpus": 8,
+    "throttling_data": {"periods": 0, "throttled_periods": 0, "throttled_time": 0}
+  },
+  "memory_stats": {
+    "usage": 250000000,
+    "stats": {
+      "active_anon": 180000000,
+      "active_file": 20000000,
+      "anon": 190000000,
+      "file": 50000000,
+      "inactive_anon": 10000000,
+      "inactive_file": 27705344,
+      "pgfault": 51234,
+      "pgmajfault": 12
+    },
+    "limit": 8217530368
+  },
+  "networks": {
+    "eth0": {"rx_bytes": 123456, "rx_packets": 800, "tx_bytes": 65432, "tx_packets": 600}
+  }
+}

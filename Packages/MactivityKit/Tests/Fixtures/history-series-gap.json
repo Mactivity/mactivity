@@ -1,0 +1,14 @@
+[
+  { "at": 810000000, "average": 10, "maximum": 15 },
+  { "at": 810000060, "average": 20, "maximum": 25 },
+  { "at": 810000120, "average": 30, "maximum": 35 },
+  { "at": 810000180, "average": 40, "maximum": 45 },
+  { "at": 810000240, "average": 50, "maximum": 90 },
+  { "at": 810000300, "average": 5, "maximum": 6 },
+  { "at": 810000360, "average": 5, "maximum": 5 },
+  { "at": 810000420, "average": 5, "maximum": 5 },
+  { "at": 810000480, "average": 5, "maximum": 5 },
+  { "at": 810000540, "average": 5, "maximum": 5 },
+  { "at": 810000900, "average": 70, "maximum": 75 },
+  { "at": 810000960, "average": 80, "maximum": 100 }
+]

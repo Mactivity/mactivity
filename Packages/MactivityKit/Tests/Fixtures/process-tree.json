@@ -1,0 +1,32 @@
+{
+  "_comment": "A small process tree for AppResolution. uid 501 is the user; 0 is root. Terminal (pid 300) runs zsh (301) which runs node (302); Slack (400) has a helper app nested in its bundle (401); an XPC service (500) is launched by launchd but responsible to Safari (200); mds (600) is a root daemon; a user agent (700) runs from /System; a CLI tool (800) runs from ~/bin under launchd; ControlCenter (900) is a non-regular system app with an agent child (901); Finder (1000) is a regular system app; a login-item helper app (1100) registers as its own running app inside 1Password.app.",
+  "processes": [
+    {"pid": 200, "parentPID": 1, "uid": 501, "name": "Safari", "executablePath": "/Applications/Safari.app/Contents/MacOS/Safari"},
+    {"pid": 300, "parentPID": 1, "uid": 501, "name": "Terminal", "executablePath": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal"},
+    {"pid": 301, "parentPID": 300, "uid": 501, "name": "zsh", "executablePath": "/bin/zsh"},
+    {"pid": 302, "parentPID": 301, "uid": 501, "name": "node", "executablePath": "/opt/homebrew/bin/node"},
+    {"pid": 400, "parentPID": 1, "uid": 501, "name": "Slack", "executablePath": "/Applications/Slack.app/Contents/MacOS/Slack"},
+    {"pid": 401, "parentPID": 400, "uid": 501, "name": "Slack Helper", "executablePath": "/Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper"},
+    {"pid": 500, "parentPID": 1, "uid": 501, "name": "com.apple.WebKit.WebContent", "executablePath": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent"},
+    {"pid": 600, "parentPID": 1, "uid": 0, "name": "mds", "executablePath": "/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds"},
+    {"pid": 700, "parentPID": 1, "uid": 501, "name": "cloudd", "executablePath": "/System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd"},
+    {"pid": 800, "parentPID": 1, "uid": 501, "name": "mytool", "executablePath": "/Users/demo/bin/mytool"},
+    {"pid": 900, "parentPID": 1, "uid": 501, "name": "ControlCenter", "executablePath": "/System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter"},
+    {"pid": 901, "parentPID": 900, "uid": 501, "name": "WidgetAgent", "executablePath": "/System/Library/CoreServices/ControlCenter.app/Contents/Helpers/WidgetAgent"},
+    {"pid": 1000, "parentPID": 1, "uid": 501, "name": "Finder", "executablePath": "/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder"},
+    {"pid": 1100, "parentPID": 1, "uid": 501, "name": "1Password Launcher", "executablePath": "/Applications/1Password.app/Contents/Library/LoginItems/1Password Launcher.app/Contents/MacOS/1Password Launcher"}
+  ],
+  "responsible": {"401": 400, "500": 200, "302": 300, "301": 300},
+  "runningApps": [
+    {"pid": 200, "bundleID": "com.apple.Safari", "name": "Safari", "bundlePath": "/Applications/Safari.app", "isRegular": true},
+    {"pid": 300, "bundleID": "com.apple.Terminal", "name": "Terminal", "bundlePath": "/System/Applications/Utilities/Terminal.app", "isRegular": true},
+    {"pid": 400, "bundleID": "com.tinyspeck.slackmacgap", "name": "Slack", "bundlePath": "/Applications/Slack.app", "isRegular": true},
+    {"pid": 900, "bundleID": "com.apple.controlcenter", "name": "Control Center", "bundlePath": "/System/Library/CoreServices/ControlCenter.app", "isRegular": false},
+    {"pid": 1000, "bundleID": "com.apple.finder", "name": "Finder", "bundlePath": "/System/Library/CoreServices/Finder.app", "isRegular": true},
+    {"pid": 1100, "bundleID": "com.1password.launcher", "name": "1Password Launcher", "bundlePath": "/Applications/1Password.app/Contents/Library/LoginItems/1Password Launcher.app", "isRegular": false}
+  ],
+  "bundles": [
+    {"path": "/Applications/Slack.app", "bundleID": "com.tinyspeck.slackmacgap", "name": "Slack"},
+    {"path": "/Applications/1Password.app", "bundleID": "com.1password.1password", "name": "1Password"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_comment": "Eight stereo Float32 frames the way a stereo mixdown process tap delivers them (48 kHz, 2 channels, Float32, kAudioTapPropertyFormat flags 9 = float | packed, interleaved L R, as read live on an M5 Pro). Values are powers of two so every gain in 'gains' multiplies exactly. 'expectedMono' is (L + R) / 2 per frame, a mono output at gain 1.",
+  "left": [0.5, -0.5, 1.0, -1.0, 0.25, 0.0, 0.125, -0.0625],
+  "right": [0.25, 0.5, -1.0, 1.0, -0.25, 0.75, 0.0, 0.0625],
+  "gains": [
+    {"volume": 0.0, "gain": 0.0},
+    {"volume": 0.5, "gain": 0.5},
+    {"volume": 1.0, "gain": 1.0},
+    {"volume": 0.25, "gain": 0.25},
+    {"volume": 1.5, "gain": 1.0},
+    {"volume": -0.5, "gain": 0.0}
+  ],
+  "expectedMono": [0.375, 0.0, 0.0, 0.0, 0.0, 0.375, 0.0625, 0.0]
+}

@@ -1,0 +1,33 @@
+{
+  "_comment": "NET_RT_IFLIST2 if_data64 byte counters by BSD name. previous is a real reading from a Mac17,9 (M5 Pro) on macOS 27.0 (netstat -ibn), plus en7, a USB Ethernet adapter. current is 5 s later: en0 (Wi-Fi) received 5000000 B and sent 1000000 B, so 1000000 B/s in and 200000 B/s out. Loopback, the VPN tunnel utun5, and AWDL moved bytes too but aren't counted, and en7 was unplugged. en0's counters are past 2^32, which 32-bit if_data would have wrapped.",
+  "elapsedSeconds": 5.0,
+  "previous": {
+    "lo0": { "bytesIn": 12826396469, "bytesOut": 12826396469 },
+    "en0": { "bytesIn": 69132800805, "bytesOut": 13298460464 },
+    "en1": { "bytesIn": 0, "bytesOut": 0 },
+    "en7": { "bytesIn": 1000000, "bytesOut": 500000 },
+    "awdl0": { "bytesIn": 3490079, "bytesOut": 3396678 },
+    "llw0": { "bytesIn": 0, "bytesOut": 0 },
+    "utun5": { "bytesIn": 7908, "bytesOut": 3098 },
+    "bridge0": { "bytesIn": 0, "bytesOut": 0 },
+    "ap1": { "bytesIn": 0, "bytesOut": 0 },
+    "anpi0": { "bytesIn": 0, "bytesOut": 0 },
+    "gif0": { "bytesIn": 0, "bytesOut": 0 },
+    "stf0": { "bytesIn": 0, "bytesOut": 0 }
+  },
+  "current": {
+    "lo0": { "bytesIn": 12876396469, "bytesOut": 12876396469 },
+    "en0": { "bytesIn": 69137800805, "bytesOut": 13299460464 },
+    "en1": { "bytesIn": 0, "bytesOut": 0 },
+    "awdl0": { "bytesIn": 3590079, "bytesOut": 3496678 },
+    "llw0": { "bytesIn": 0, "bytesOut": 0 },
+    "utun5": { "bytesIn": 4007908, "bytesOut": 1003098 },
+    "bridge0": { "bytesIn": 0, "bytesOut": 0 },
+    "ap1": { "bytesIn": 0, "bytesOut": 0 },
+    "anpi0": { "bytesIn": 0, "bytesOut": 0 },
+    "gif0": { "bytesIn": 0, "bytesOut": 0 },
+    "stf0": { "bytesIn": 0, "bytesOut": 0 }
+  },
+  "expectedInBPS": 1000000,
+  "expectedOutBPS": 200000
+}

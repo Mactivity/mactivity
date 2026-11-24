@@ -1,0 +1,15 @@
+{
+  "_comment": "One host_statistics64(HOST_VM_INFO64) reading and the memory sysctls from a Mac17,9 (M5 Pro, 48 GB) on macOS 27.0, as vm_stat and sysctl reported them. 16 KB pages. App = (internal - purgeable) x page = 24358420480; wired 4023599104; compressed 1431814144; used 29813833728; cached files (external + purgeable) x page = 16647372800.",
+  "counts": {
+    "internalPages": 1527847,
+    "wiredPages": 245581,
+    "compressorPages": 87391,
+    "externalPages": 974948,
+    "purgeablePages": 41127
+  },
+  "pageSize": 16384,
+  "totalBytes": 51539607552,
+  "swapUsedBytes": 1082851328,
+  "pressureLevel": 1,
+  "availableLevel": 89
+}

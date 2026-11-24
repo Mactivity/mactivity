@@ -1,0 +1,24 @@
+{
+  "LayersSize": 9000000000,
+  "Images": [
+    {"Id": "sha256:a", "RepoTags": ["postgres:16"], "Size": 4000000000, "SharedSize": 1000000000, "Containers": 1, "Labels": {}},
+    {"Id": "sha256:b", "RepoTags": ["storefront-web:latest"], "Size": 3000000000, "SharedSize": 1000000000, "Containers": 1,
+     "Labels": {"com.docker.compose.project": "storefront"}},
+    {"Id": "sha256:c", "RepoTags": ["old-tool:1"], "Size": 2000000000, "SharedSize": 0, "Containers": 0, "Labels": null}
+  ],
+  "Containers": [
+    {"Id": "1", "Names": ["/storefront-web-1"], "SizeRw": 50000000, "State": "running",
+     "Labels": {"com.docker.compose.project": "storefront"}},
+    {"Id": "2", "Names": ["/old"], "SizeRw": 30000000, "State": "exited", "Labels": {}}
+  ],
+  "Volumes": [
+    {"Name": "storefront_db", "Labels": {"com.docker.compose.project": "storefront"}, "UsageData": {"Size": 800000000, "RefCount": 1}},
+    {"Name": "orphan", "Labels": null, "UsageData": {"Size": 200000000, "RefCount": 0}},
+    {"Name": "unknown", "Labels": {}, "UsageData": {"Size": -1, "RefCount": -1}}
+  ],
+  "BuildCache": [
+    {"ID": "x", "Size": 500000000, "InUse": false, "Shared": false},
+    {"ID": "y", "Size": 100000000, "InUse": true, "Shared": false},
+    {"ID": "z", "Size": 700000000, "InUse": false, "Shared": true}
+  ]
+}

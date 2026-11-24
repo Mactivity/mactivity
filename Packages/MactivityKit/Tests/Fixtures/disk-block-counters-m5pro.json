@@ -1,0 +1,34 @@
+{
+  "_comment": "IOBlockStorageDriver Statistics keyed by registry entry ID, from a Mac17,9 (M5 Pro) on macOS 27.0. 4294970255 (0x100000b8f) is the internal NVMe SSD, 4294971085 (0x100000ecd) the SD card slot (empty, all zeros). Between previous and current, 2 s apart: the SSD read 52428800 B and wrote 10485760 B (26214400 B/s read, 5242880 B/s write); the SD slot went away and 4294998089 (a newly attached disk) appeared with 22424419328 B already read, which must not show as a spike.",
+  "elapsedSeconds": 2.0,
+  "previous": {
+    "4294970255": { "bytesRead": 670544699392, "bytesWritten": 699461193728 },
+    "4294971085": { "bytesRead": 0, "bytesWritten": 0 }
+  },
+  "current": {
+    "4294970255": { "bytesRead": 670597128192, "bytesWritten": 699471679488 },
+    "4294998089": { "bytesRead": 22424419328, "bytesWritten": 0 }
+  },
+  "expectedReadBPS": 26214400,
+  "expectedWriteBPS": 5242880,
+  "nvmeStatistics": {
+    "Operations (Write)": 40628668,
+    "Latency Time (Write)": 0,
+    "Bytes (Read)": 670544699392,
+    "Errors (Write)": 0,
+    "Total Time (Read)": 4207691938648,
+    "Latency Time (Read)": 0,
+    "Retries (Read)": 0,
+    "Errors (Read)": 0,
+    "Total Time (Write)": 4678346517830,
+    "Bytes (Write)": 699461193728,
+    "Operations (Read)": 20894120,
+    "Retries (Write)": 0
+  },
+  "protocolCharacteristics": {
+    "nvme": { "Physical Interconnect": "Apple Fabric", "Physical Interconnect Location": "Internal" },
+    "sdCard": { "Physical Interconnect": "Secure Digital", "Physical Interconnect Location": "Internal" },
+    "diskImage": { "Physical Interconnect": "Virtual Interface", "Physical Interconnect Location": "File" },
+    "diskImageInKernel": { "Physical Interconnect": "Virtual Interface" }
+  }
+}

@@ -1,0 +1,21 @@
+- **Mactivity is free.** No license key, no account: the license screen, Settings → License and the license check are gone, and the source is open under the MIT license. Bought a license earlier? There is nothing to do.
+- **Focus streaks**, on History: your longest stretches in one app each day, and which apps break them up most.
+- **Busiest hours**, on History: a weekday-by-hour grid of when your Mac works hardest and when it sits idle. Time it was off or asleep stays blank.
+- **Notifications by app**, on History: which apps send the most and at what times of day, keeping only the app and the time, never what it said.
+- **Your week, on your day:** choose the day your weekly summary arrives, Sunday evening included.
+- **Bigger figures:** a Larger setting in Settings → Customize for figures, chart labels and the text around them.
+- **Chargers compared**, on the Battery tab: how many watts each power rating really delivers and how fast it fills the battery, compared like for like.
+- **Battery temperature**, on the Battery tab: how warm the battery runs while charging and in use, over the same range as the watts.
+- **Local databases**, in Projects: the PostgreSQL, MySQL, Redis and MongoDB running on your Mac, with their memory, their data on disk, and the ones showing no sign of use in weeks.
+- **Test run times:** `swift test`, `npm test`, `pytest` and `cargo test` timed per project like builds, with failed and cancelled runs marked and not mistaken for fast ones.
+- **Projects at a glance**, in Projects → Folders: each project's language, the runtime version it asks for, its size and when you last worked in it. Space now lives here as Build Folders.
+- **Remote sessions**, in Projects: the SSH sessions and tunnels open from your Mac, how long each has been open, and the ports they forward.
+- **What wears your SSD**, on the Disk tab: each app's writes over 30 days beside the drive's own lifetime figure.
+- **Old app versions and leftovers**, in Storage → Clean Up: second copies of apps and support files of apps that are gone, each explained, nothing ticked, and only ever to the Trash.
+- **Photos library**, on Storage: what it takes on this Mac, by originals, edits, thumbnails, shared albums and database.
+- **External drives**, on the Disk tab: space and health, remembered with "last seen" after you unplug them.
+- **Network drives**, on the Disk tab: space for each share, "Not responding" for a dead one, and activity for NFS. A stuck share no longer holds up sampling.
+- **Crowded Wi-Fi channels**, on the Network tab: scan to see whether nearby networks share your channel, and which channel sounds quieter.
+- **Configuration profiles**, on the Security page: the profiles installed for you, who put them there and the kinds of setting they change, and whether your Mac is managed.
+- **Unlocks**, on the Security page: when your Mac was unlocked and whether with Touch ID, a password or your Apple Watch, plus any failed attempts macOS logged.
+- **Warnings you can read in light mode:** amber warnings, such as a project that's barely used, and the green "faster" beside build and test times are darker on light backgrounds. Dark mode is unchanged.

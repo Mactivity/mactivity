@@ -1,0 +1,29 @@
+{
+  "_comment": "NetworkStatistics callbacks in the order the manager's queue delivered them on a Mac17,9 (M5 Pro) on macOS 27.0, reduced to the fields the ledger reads. Source ids are the NStatSourceRef addresses, shortened. description marks the description callback; the rest are counts callbacks. curl (pid 87538) made one HTTPS request: its UDP source never carried bytes, and its TCP source got final counts (261526 in, 589 out) just before it was removed, before any query ran. Those bytes must survive the removal. Ollama's listener is on loopback and never counts. Claude Helper's socket (source 6) was open before the subscription, so its first counts arrive without a PID; until every source has been described, the monitor asks for update queries rather than counts only. PID 87538 is later reused by a different process (another uniqueProcessID), which must not inherit curl's bytes. A counts callback that arrives late with smaller numbers is ignored.",
+  "steps": [
+    { "op": "expectNeedsDescriptions", "value": true },
+    { "op": "update", "source": 1, "pid": 34963, "uniquePID": 658001, "rx": 14607, "tx": 2236820, "loopback": false, "description": true },
+    { "op": "update", "source": 2, "pid": 64822, "uniquePID": 658442, "rx": 0, "tx": 0, "loopback": true, "description": true },
+    { "op": "update", "source": 3, "pid": 87538, "uniquePID": 700100, "rx": 0, "tx": 0, "loopback": false, "description": true },
+    { "op": "update", "source": 4, "pid": 87538, "uniquePID": 700100, "rx": 0, "tx": 0, "loopback": false, "description": true },
+    { "op": "expectNeedsDescriptions", "value": false },
+    { "op": "update", "source": 6, "rx": 23943576, "tx": 9482712 },
+    { "op": "expectNeedsDescriptions", "value": true },
+    { "op": "expect", "totals": { "34963": [14607, 2236820], "87538": [0, 0] } },
+    { "op": "update", "source": 6, "pid": 29296, "uniquePID": 652001, "rx": 23943576, "tx": 9482712, "description": true },
+    { "op": "expectNeedsDescriptions", "value": false },
+    { "op": "expect", "totals": { "34963": [14607, 2236820], "87538": [0, 0], "29296": [23943576, 9482712] } },
+    { "op": "remove", "source": 3 },
+    { "op": "update", "source": 4, "pid": 87538, "uniquePID": 700100, "rx": 261526, "tx": 589 },
+    { "op": "remove", "source": 4 },
+    { "op": "update", "source": 1, "rx": 16938, "tx": 2236820 },
+    { "op": "update", "source": 1, "rx": 15000, "tx": 2236000 },
+    { "op": "update", "source": 2, "rx": 5000000, "tx": 5000000 },
+    { "op": "expect", "totals": { "34963": [16938, 2236820], "87538": [261526, 589], "29296": [23943576, 9482712] } },
+    { "op": "update", "source": 5, "pid": 87538, "uniquePID": 700999, "rx": 100, "tx": 50, "loopback": false, "description": true },
+    { "op": "expect", "totals": { "34963": [16938, 2236820], "87538": [100, 50], "29296": [23943576, 9482712] } },
+    { "op": "remove", "source": 5 },
+    { "op": "prune", "dead": [87538] },
+    { "op": "expect", "totals": { "34963": [16938, 2236820], "29296": [23943576, 9482712] } }
+  ]
+}

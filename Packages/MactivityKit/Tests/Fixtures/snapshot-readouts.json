@@ -1,0 +1,187 @@
+{
+  "apps" : [
+    {
+      "app" : {
+        "iconKey" : "system",
+        "id" : "system",
+        "kind" : "system",
+        "name" : "macOS"
+      },
+      "cpuPercent" : 4.1,
+      "diskReadBPS" : 100000,
+      "diskWriteBPS" : 50000,
+      "energyMW" : 800,
+      "memoryBytes" : 9663676416,
+      "processCount" : 812
+    },
+    {
+      "app" : {
+        "bundleID" : "com.apple.dt.Xcode",
+        "iconKey" : "com.apple.dt.Xcode",
+        "id" : "com.apple.dt.Xcode",
+        "kind" : "app",
+        "name" : "Xcode"
+      },
+      "cpuPercent" : 12.6,
+      "diskReadBPS" : 900000,
+      "diskWriteBPS" : 300000,
+      "energyMW" : 4100,
+      "gpuPercent" : 1.5,
+      "memoryBytes" : 6657199308,
+      "processCount" : 14
+    },
+    {
+      "app" : {
+        "bundleID" : "com.apple.Safari",
+        "iconKey" : "com.apple.Safari",
+        "id" : "com.apple.Safari",
+        "kind" : "app",
+        "name" : "Safari"
+      },
+      "cpuPercent" : 3.2,
+      "diskReadBPS" : 0,
+      "diskWriteBPS" : 20000,
+      "energyMW" : 950,
+      "gpuPercent" : 2,
+      "memoryBytes" : 3328599654,
+      "processCount" : 31
+    },
+    {
+      "app" : {
+        "bundleID" : "com.tinyspeck.slackmacgap",
+        "iconKey" : "com.tinyspeck.slackmacgap",
+        "id" : "com.tinyspeck.slackmacgap",
+        "kind" : "app",
+        "name" : "Slack"
+      },
+      "cpuPercent" : 0.4,
+      "diskReadBPS" : 0,
+      "diskWriteBPS" : 0,
+      "energyMW" : 120,
+      "memoryBytes" : 851443712,
+      "processCount" : 6
+    },
+    {
+      "app" : {
+        "iconKey" : "other:node",
+        "id" : "other:node",
+        "kind" : "other",
+        "name" : "node"
+      },
+      "cpuPercent" : 7.9,
+      "diskReadBPS" : 10000,
+      "diskWriteBPS" : 0,
+      "memoryBytes" : 480247808,
+      "processCount" : 3
+    },
+    {
+      "app" : {
+        "bundleID" : "com.apple.Terminal",
+        "iconKey" : "com.apple.Terminal",
+        "id" : "com.apple.Terminal",
+        "kind" : "terminal",
+        "name" : "Terminal"
+      },
+      "cpuPercent" : 0,
+      "diskReadBPS" : 0,
+      "diskWriteBPS" : 0,
+      "energyMW" : 0,
+      "memoryBytes" : 100663296,
+      "processCount" : 4
+    }
+  ],
+  "at" : 812023200,
+  "interval" : [
+    0,
+    1000000000000000000
+  ],
+  "processes" : [
+
+  ],
+  "system" : {
+    "battery" : {
+      "cycleCount" : 42,
+      "isCharging" : true,
+      "maxCapacityPercent" : 98.5,
+      "percent" : 87,
+      "source" : "ac",
+      "timeRemaining" : [
+        211,
+        7737000447284609024
+      ]
+    },
+    "cpu" : {
+      "clusters" : [
+        {
+          "coreIndexes" : [
+            2,
+            3
+          ],
+          "level" : 1,
+          "name" : "Efficiency",
+          "percent" : 21.8
+        },
+        {
+          "coreIndexes" : [
+            0,
+            1
+          ],
+          "level" : 0,
+          "name" : "Performance",
+          "percent" : 25
+        }
+      ],
+      "loadAverage" : {
+        "fifteen" : 1.98,
+        "five" : 2.1,
+        "one" : 2.31
+      },
+      "perCorePercent" : [
+        30,
+        20,
+        25,
+        18.6
+      ],
+      "systemPercent" : 8.3,
+      "totalPercent" : 23.4,
+      "userPercent" : 15.1
+    },
+    "disk" : {
+      "readBPS" : 1200000,
+      "volumes" : [
+        {
+          "freeBytes" : 716859834368,
+          "id" : "disk3s1",
+          "name" : "Macintosh HD",
+          "totalBytes" : 994662584320
+        }
+      ],
+      "writeBPS" : 400000
+    },
+    "gpu" : {
+      "name" : "Apple M5 Pro",
+      "utilizationPercent" : 4.2
+    },
+    "memory" : {
+      "appBytes" : 12884901888,
+      "availableLevel" : 60,
+      "cachedFilesBytes" : 8589934592,
+      "compressedBytes" : 3221225472,
+      "pressure" : "normal",
+      "swapUsedBytes" : 0,
+      "totalBytes" : 51539607552,
+      "usedBytes" : 19327352832,
+      "wiredBytes" : 3221225472
+    },
+    "network" : {
+      "inBPS" : 12400,
+      "outBPS" : 3100,
+      "primaryInterface" : "en0"
+    },
+    "thermal" : "nominal",
+    "uptime" : [
+      14831,
+      16338642813639983104
+    ]
+  }
+}

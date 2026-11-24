@@ -1,0 +1,21 @@
+{
+  "read": "2026-09-25T12:00:01.000000000Z",
+  "preread": "2026-09-25T12:00:00.000000000Z",
+  "name": "/minio",
+  "id": "e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8",
+  "cpu_stats": {
+    "cpu_usage": {"total_usage": 91000000000},
+    "system_cpu_usage": 508000000000,
+    "online_cpus": 8
+  },
+  "precpu_stats": {
+    "cpu_usage": {"total_usage": 90000000000},
+    "system_cpu_usage": 500000000000,
+    "online_cpus": 8
+  },
+  "memory_stats": {
+    "usage": 1500000000,
+    "stats": {"inactive_file": 100000000, "anon": 1300000000, "file": 200000000},
+    "limit": 8217530368
+  }
+}

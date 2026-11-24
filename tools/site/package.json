@@ -1,0 +1,8 @@
+{
+  "name": "mactivity-site-tools",
+  "private": true,
+  "description": "The tool that publishes mactivity.app (make site), pinned with a lockfile so a deploy never runs a package version nobody chose (D-256).",
+  "devDependencies": {
+    "wrangler": "4.150.0"
+  }
+}

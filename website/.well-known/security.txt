@@ -1,0 +1,6 @@
+# How to report a security problem in Mactivity or mactivity.app (RFC 9116).
+# Renew Expires before it passes; scripts/site.sh refuses to publish an expired file.
+Contact: https://github.com/Mactivity/mactivity/security/advisories/new
+Expires: 2027-10-16T00:00:00Z
+Preferred-Languages: en
+Canonical: https://mactivity.app/.well-known/security.txt

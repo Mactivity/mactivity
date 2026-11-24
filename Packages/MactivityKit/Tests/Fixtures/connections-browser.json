@@ -1,0 +1,27 @@
+{
+  "comment": "A browser's sockets across three processes: a main process, a networking helper, and a renderer. Addresses are from the documentation ranges.",
+  "sockets": [
+    { "pid": 400, "socket": { "fd": 12, "transport": "tcp", "isIPv6": false, "localAddress": "127.0.0.1", "localPort": 49001, "remoteAddress": "127.0.0.1", "remotePort": 5173, "state": "established" } },
+    { "pid": 400, "socket": { "fd": 13, "transport": "tcp", "isIPv6": true, "localPort": 7000, "remotePort": 0, "state": "listen" } },
+    { "pid": 401, "socket": { "fd": 40, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52011, "remoteAddress": "192.0.2.10", "remotePort": 443, "state": "established" } },
+    { "pid": 401, "socket": { "fd": 41, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52012, "remoteAddress": "192.0.2.10", "remotePort": 443, "state": "timeWait" } },
+    { "pid": 402, "socket": { "fd": 30, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52100, "remoteAddress": "192.0.2.10", "remotePort": 443, "state": "established" } },
+    { "pid": 401, "socket": { "fd": 42, "transport": "udp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 60311, "remoteAddress": "192.0.2.10", "remotePort": 443 } },
+    { "pid": 401, "socket": { "fd": 43, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52040, "remoteAddress": "192.0.2.44", "remotePort": 443, "state": "timeWait" } },
+    { "pid": 401, "socket": { "fd": 44, "transport": "tcp", "isIPv6": true, "localAddress": "2001:db8:1::20", "localPort": 52050, "remoteAddress": "2001:db8:5::10", "remotePort": 443, "state": "established" } },
+    { "pid": 401, "socket": { "fd": 45, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52060, "remoteAddress": "198.51.100.90", "remotePort": 80, "state": "synSent" } },
+    { "pid": 401, "socket": { "fd": 46, "transport": "udp", "isIPv6": false, "localPort": 5353, "remotePort": 0 } },
+    { "pid": 401, "socket": { "fd": 47, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52070, "remoteAddress": "203.0.113.25", "remotePort": 5223, "state": "established" } },
+    { "pid": 402, "socket": { "fd": 31, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52101, "remoteAddress": "203.0.113.25", "remotePort": 5223, "state": "established" } },
+    { "pid": 402, "socket": { "fd": 32, "transport": "tcp", "isIPv6": false, "localAddress": "192.168.1.20", "localPort": 52102, "remoteAddress": "203.0.113.25", "remotePort": 5223, "state": "established" } }
+  ],
+  "expected": [
+    { "transport": "tcp", "remoteAddress": "192.0.2.10", "remotePort": 443, "state": "established", "socketCount": 3, "pids": [401, 402] },
+    { "transport": "tcp", "remoteAddress": "203.0.113.25", "remotePort": 5223, "state": "established", "socketCount": 3, "pids": [401, 402] },
+    { "transport": "udp", "remoteAddress": "192.0.2.10", "remotePort": 443, "socketCount": 1, "pids": [401] },
+    { "transport": "tcp", "remoteAddress": "2001:db8:5::10", "remotePort": 443, "state": "established", "socketCount": 1, "pids": [401] },
+    { "transport": "tcp", "remoteAddress": "198.51.100.90", "remotePort": 80, "state": "synSent", "socketCount": 1, "pids": [401] },
+    { "transport": "tcp", "remoteAddress": "192.0.2.44", "remotePort": 443, "state": "timeWait", "socketCount": 1, "pids": [401] },
+    { "transport": "tcp", "remoteAddress": "127.0.0.1", "remotePort": 5173, "state": "established", "socketCount": 1, "pids": [400] }
+  ]
+}

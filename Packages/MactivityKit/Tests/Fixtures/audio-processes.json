@@ -1,0 +1,34 @@
+{
+  "_comment": "kAudioHardwarePropertyProcessObjectList as read on an M5 Pro with Safari playing a video and afplay playing a tone, trimmed and with a few synthetic edge cases. Mactivity is pid 5000. Covers: bundled apps and helpers (bundle ID as app ID and settings key), a command-line tool with no bundle ID (other:<pid>, keyed by executable path), an empty bundle ID with no readable path (session pid: key), a tapped process that's paused (kept), a paused process whose settings couldn't be applied (kept, needsPermission), a process not playing and not tapped (left out even though its app is remembered), a duplicate pid (one client), pid 0 and -1 (left out), and Mactivity itself (left out). Settings are per app: Safari at 50% on headphones, Messages muted at 25%, afplay at 30%, Photo Booth muted.",
+  "ownPID": 5000,
+  "settings": {
+    "com.apple.Safari": {"volume": 0.5, "isMuted": false, "outputDeviceUID": "headphones-uid"},
+    "com.apple.MobileSMS": {"volume": 0.25, "isMuted": true},
+    "/usr/bin/afplay": {"volume": 0.3, "isMuted": false},
+    "com.apple.PhotoBooth": {"volume": 1, "isMuted": true}
+  },
+  "tapped": [28454],
+  "blocked": [30100],
+  "processes": [
+    {"objectID": 101, "pid": 39742, "bundleID": "com.apple.Safari", "isRunningOutput": true},
+    {"objectID": 100, "pid": 39757, "bundleID": "com.apple.WebKit.GPU", "isRunningOutput": true},
+    {"objectID": 112, "pid": 65177, "bundleID": null, "executablePath": "/usr/bin/afplay", "isRunningOutput": true},
+    {"objectID": 113, "pid": 65175, "bundleID": "", "isRunningOutput": true},
+    {"objectID": 104, "pid": 28454, "bundleID": "com.apple.MobileSMS", "isRunningOutput": false},
+    {"objectID": 105, "pid": 30100, "bundleID": "com.apple.PhotoBooth", "isRunningOutput": false},
+    {"objectID": 106, "pid": 39800, "bundleID": "com.apple.Safari", "isRunningOutput": false},
+    {"objectID": 97, "pid": 11676, "bundleID": "com.apple.PowerChime", "isRunningOutput": false},
+    {"objectID": 120, "pid": 39757, "bundleID": "com.apple.WebKit.GPU", "isRunningOutput": true},
+    {"objectID": 121, "pid": 0, "bundleID": "com.apple.kernel", "isRunningOutput": true},
+    {"objectID": 122, "pid": -1, "bundleID": null, "isRunningOutput": true},
+    {"objectID": 130, "pid": 5000, "bundleID": "app.mactivity.Mactivity", "isRunningOutput": true}
+  ],
+  "expected": [
+    {"pid": 28454, "app": "com.apple.MobileSMS", "volume": 0.25, "isMuted": true, "settingsKey": "com.apple.MobileSMS", "needsPermission": false},
+    {"pid": 30100, "app": "com.apple.PhotoBooth", "volume": 1.0, "isMuted": true, "settingsKey": "com.apple.PhotoBooth", "needsPermission": true},
+    {"pid": 39742, "app": "com.apple.Safari", "volume": 0.5, "isMuted": false, "outputDeviceUID": "headphones-uid", "settingsKey": "com.apple.Safari", "needsPermission": false},
+    {"pid": 39757, "app": "com.apple.WebKit.GPU", "volume": 1.0, "isMuted": false, "settingsKey": "com.apple.WebKit.GPU", "needsPermission": false},
+    {"pid": 65175, "app": "other:65175", "volume": 1.0, "isMuted": false, "settingsKey": "pid:65175", "needsPermission": false},
+    {"pid": 65177, "app": "other:65177", "volume": 0.3, "isMuted": false, "settingsKey": "/usr/bin/afplay", "needsPermission": false}
+  ]
+}

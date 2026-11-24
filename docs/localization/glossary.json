@@ -1,0 +1,19 @@
+{
+  "_about": "Apple's own translations, read from Activity Monitor and System Settings on macOS 27 (2026-09-27). Mactivity uses these words wherever it says the same thing, so it reads like part of macOS. Terms not listed here are translated fresh; mark doubtful ones for native review.",
+  "Quit": {"de": "Beenden", "fr": "Quitter", "es": "Salir", "it": "Esci", "pt-BR": "Encerrar", "nl": "Stop", "ja": "終了", "ko": "종료", "zh-Hans": "退出", "zh-Hant": "結束"},
+  "Force Quit": {"de": "Sofort beenden", "fr": "Forcer à quitter", "es": "Forzar salida", "it": "Uscita forzata", "pt-BR": "Forçar Encerrar", "nl": "Forceer stop", "ja": "強制終了", "ko": "강제 종료", "zh-Hans": "强制退出", "zh-Hant": "強制結束"},
+  "Energy": {"de": "Energie", "fr": "Énergie", "es": "Energía", "it": "Energia", "pt-BR": "Energia", "nl": "Energie", "ja": "エネルギー", "ko": "에너지", "zh-Hans": "能耗", "zh-Hant": "能耗"},
+  "Memory": {"de": "Speicher", "fr": "Mémoire", "es": "Memoria", "it": "Memoria", "pt-BR": "Memória", "nl": "Geheugen", "ja": "メモリ", "ko": "메모리", "zh-Hans": "内存", "zh-Hant": "記憶體"},
+  "Disk": {"de": "Festplatte", "fr": "Disque", "es": "Disco", "it": "Disco", "pt-BR": "Disco", "nl": "Schijf", "ja": "ディスク", "ko": "디스크", "zh-Hans": "磁盘", "zh-Hant": "磁碟"},
+  "Network": {"de": "Netzwerk", "fr": "Réseau", "es": "Red", "it": "Rete", "pt-BR": "Rede", "nl": "Netwerk", "ja": "ネットワーク", "ko": "네트워크", "zh-Hans": "网络", "zh-Hant": "網路"},
+  "CPU": {"de": "CPU", "fr": "Processeur", "es": "CPU", "it": "CPU", "pt-BR": "CPU", "nl": "CPU", "ja": "CPU", "ko": "CPU", "zh-Hans": "CPU", "zh-Hant": "CPU"},
+  "GPU": {"de": "GPU", "fr": "GPU", "es": "GPU", "it": "GPU", "pt-BR": "GPU", "nl": "GPU", "ja": "GPU", "ko": "GPU", "zh-Hans": "GPU", "zh-Hant": "GPU"},
+  "Process Name": {"de": "Prozessname", "fr": "Nom du processus", "es": "Nombre del proceso", "it": "Nome Processo", "pt-BR": "Nome do Processo", "nl": "Procesnaam", "ja": "プロセス名", "ko": "프로세스 이름", "zh-Hans": "进程名称", "zh-Hant": "程序名稱"},
+  "Time until full": {"de": "Restladezeit", "fr": "Temps jusqu’à la recharge", "es": "Tiempo para la carga completa", "it": "Tempo per la ricarica completa", "pt-BR": "Tempo até carga completa", "nl": "Tijd tot opgeladen", "ja": "フル充電までの時間", "ko": "충전 완료까지 남은 시간", "zh-Hans": "充满电需要的时间", "zh-Hant": "完成充電的時間"},
+  "Time on battery": {"de": "Zeit im Batteriebetrieb", "fr": "Temps sur la batterie", "es": "Tiempo con la batería", "it": "Tempo con batteria", "pt-BR": "Tempo na bateria", "nl": "Tijd op batterij", "ja": "バッテリー電源の使用時間", "ko": "배터리 사용 시간", "zh-Hans": "使用电池时间", "zh-Hant": "電池使用時間"},
+  "Low Power Mode": {"de": "Stromsparmodus", "fr": "Mode Économie d’énergie", "es": "Modo de bajo consumo", "it": "Risparmio energetico", "pt-BR": "Modo Pouca Energia", "nl": "Energiebesparingsmodus", "ja": "低電力モード", "ko": "저전력 모드", "zh-Hans": "低电量模式", "zh-Hant": "低耗電模式"},
+  "Fully Charged": {"de": "Vollständig geladen", "fr": "Charge complète", "es": "Totalmente cargada", "it": "Carica completa", "pt-BR": "Totalmente Carregada", "nl": "Volledig opgeladen", "ja": "フル充電済み", "ko": "충전 완료됨", "zh-Hans": "已充满电", "zh-Hant": "已充飽電"},
+  "Power Adapter": {"de": "Netzteil", "fr": "Adaptateur secteur", "es": "Adaptador de corriente", "it": "Alimentatore di corrente", "pt-BR": "Adaptador de alimentação", "nl": "Lichtnetadapter", "ja": "電源アダプタ", "ko": "전원 어댑터", "zh-Hans": "电源适配器", "zh-Hant": "電源轉接器"},
+  "Login Items": {"de": "Anmeldeobjekte", "fr": "Ouverture", "es": "Ítems de inicio", "it": "Elementi login", "pt-BR": "Itens de Início", "nl": "Inloggen", "ja": "ログイン項目", "ko": "로그인 항목", "zh-Hans": "登录项", "zh-Hant": "登入項目"},
+  "Open at Login": {"de": "Bei der Anmeldung öffnen", "fr": "Ouvrir avec la session", "es": "Abrir al iniciar sesión", "it": "Apri al login", "pt-BR": "Abrir no Início da Sessão", "nl": "Open bij inloggen", "ja": "ログイン時に開く", "ko": "로그인 시 열기", "zh-Hans": "登录时打开", "zh-Hant": "在登入時打開"}
+}
