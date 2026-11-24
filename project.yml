@@ -30,8 +30,8 @@ settings:
     # into .stringsdata, which `make sync-strings` merges into the String Catalogs.
     SWIFT_EMIT_LOC_STRINGS: YES
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
-    MARKETING_VERSION: "1.9.2"
-    CURRENT_PROJECT_VERSION: "36"
+    MARKETING_VERSION: "1.10.0"
+    CURRENT_PROJECT_VERSION: "37"
 packages:
   MactivityKit:
     path: Packages/MactivityKit

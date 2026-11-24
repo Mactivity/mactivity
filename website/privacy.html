@@ -14,6 +14,8 @@
 <p>When you click Upgrade in Outdated Software and confirm, Mactivity runs <code>brew upgrade</code> for you, which downloads the new versions from Homebrew, as it does when you run it yourself.</p>
 <h2>Everything else stays on your Mac</h2>
 <p>History lives in <code>~/Library/Application Support/Mactivity</code>. There are no analytics, no crash reports, and no accounts. Deleting history in Settings deletes it.</p>
+<h2>What Mactivity reads from macOS&#39;s own log</h2>
+<p>For History → Notifications by app, Mactivity reads macOS&#39;s log every three hours for the lines that say a notification was delivered. It keeps which app sent it and when, never the title or the text. For Security → Unlocks, it reads when your Mac was unlocked and how. Both are read on your Mac and never sent anywhere.</p>
 <h2>This website</h2>
 <p>mactivity.app counts visits with Cloudflare Web Analytics: page views, the country, and the browser, with no cookies and nothing that identifies you. That's about the website only. The app itself sends nothing about which apps you use or how often.</p>
 <h2>Permissions Mactivity may ask for</h2>
