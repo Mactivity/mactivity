@@ -235,7 +235,7 @@ for feature in features {
 /// 4. Fact cards: one true thing, large.
 let facts: [(name: String, headline: String, line: String)] = [
     ("price", "Free.", "No license key, no account, no subscription. The source is open."),
-    ("light", "Under 0.2% of one core.", "Mactivity idle in your menu bar, with under 30 MB of memory."),
+    ("light", "Under 0.25% of one core.", "Mactivity idle in your menu bar, with under 30 MB of memory."),
     ("apps", "About 60 apps,\nnot 1,000 processes.", "Every helper adds up under the app it belongs to."),
     ("history", "A year of history.", "Kept on your Mac, and only there."),
     ("privacy", "Nothing leaves your Mac.", "No analytics and no accounts. Only the update check goes out."),

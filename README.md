@@ -14,7 +14,7 @@ One lightweight Mac app that does the jobs of several small utilities: activity 
 - **Network interfaces.** What `ifconfig` shows, in plain words, with a hover explaining each fact.
 - **Per-app audio (experimental).** Volume, mute, and output device per app, remembered between launches. Off until you turn it on in Settings.
 - **Shortcuts, CLI, widgets.** Four Shortcuts actions, a read-only `mactivity` command-line tool, and small, medium, and large desktop widgets.
-- **Light.** Under 0.2% of one core and under 30 MB of memory while it sits in the menu bar as an icon (M5 Pro, macOS 27).
+- **Light.** Under 0.25% of one core and under 30 MB of memory while it sits in the menu bar as an icon (M5 Pro, macOS 27).
 - **Nothing leaves the Mac.** One network call on its own: the update check. Host-name lookups and the Homebrew vulnerability check happen only if you turn them on.
 
 ## Free and open source

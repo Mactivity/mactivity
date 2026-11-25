@@ -23,7 +23,7 @@ Made by Kade Clifton. Signed and notarized by Apple. In 11 languages. Not on the
 - Outdated software: Homebrew packages and language versions (pyenv, nvm, rbenv, asdf, mise) past their end of life or with known vulnerabilities (opt-in check through Homebrew and OSV.dev), with upgrades after confirming; also Homebrew itself and apps carrying an old Sparkle updater, from a table that ships with the app.
 - Sensors, fans, accessory batteries, displays and devices, startup items, code signatures, open ports and the firewall, Wi-Fi over time, a monthly data budget.
 - Your own keyboard shortcuts, a Stay Awake widget, Siri and Shortcuts summaries (your day, out of the ordinary, builds, agent time), alerts held while you're on a call or presenting, and a report file to compare two Macs.
-- Light: under 0.2% of one core and under 30 MB of memory, idle with the menu bar icon.
+- Light: under 0.25% of one core and under 30 MB of memory, idle with the menu bar icon.
 
 ## Pages
 
