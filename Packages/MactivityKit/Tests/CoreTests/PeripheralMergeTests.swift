@@ -26,8 +26,8 @@ struct PeripheralMergeTests {
                 hid("F0T2", "Magic Trackpad", .trackpad, 41, address: "aa-bb-cc-dd-ee-02"),
             ],
             bluetooth: [
-                wireless("aa-bb-cc-dd-ee-01", "Kade’s Keyboard", .keyboard, 70),
-                wireless("aa-bb-cc-dd-ee-02", "Kade’s Trackpad", .trackpad, 40),
+                wireless("aa-bb-cc-dd-ee-01", "Robin’s Keyboard", .keyboard, 70),
+                wireless("aa-bb-cc-dd-ee-02", "Robin’s Trackpad", .trackpad, 40),
                 wireless("aa-bb-cc-dd-ee-03", "AirPods Pro", .airPods, 55),
             ]
         )
@@ -35,7 +35,7 @@ struct PeripheralMergeTests {
         let keyboard = merged.first { $0.kind == .keyboard }
         // The serial number keeps its history, the name is the person's, the level is IORegistry's.
         #expect(keyboard?.id == "F0T1")
-        #expect(keyboard?.name == "Kade’s Keyboard")
+        #expect(keyboard?.name == "Robin’s Keyboard")
         #expect(keyboard?.percent == 73)
     }
 

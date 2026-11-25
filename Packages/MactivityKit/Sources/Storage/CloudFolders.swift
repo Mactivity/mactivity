@@ -44,8 +44,8 @@ public enum CloudFolders {
         URL(fileURLWithPath: home).appendingPathComponent("Library/CloudStorage", isDirectory: true)
     }
 
-    /// Pure: a name for a `~/Library/CloudStorage` folder. "GoogleDrive-kade@example.com" is
-    /// "Google Drive (kade@example.com)"; "OneDrive-Personal" is "OneDrive (Personal)".
+    /// Pure: a name for a `~/Library/CloudStorage` folder. "GoogleDrive-robin@example.com" is
+    /// "Google Drive (robin@example.com)"; "OneDrive-Personal" is "OneDrive (Personal)".
     public static func displayName(_ entry: String) -> String {
         let parts = entry.split(separator: "-", maxSplits: 1).map(String.init)
         let provider = switch parts.first ?? entry {

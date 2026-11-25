@@ -9,11 +9,11 @@ struct DeviceBackupsTests {
         let date = Date(timeIntervalSince1970: 1_710_000_000)
         let backup = DeviceBackups.backup(
             path: "/b/00008120-001A",
-            info: ["Display Name": "Kade's iPhone", "Product Name": "iPhone 15 Pro", "Product Version": "18.1", "Last Backup Date": date],
+            info: ["Display Name": "Robin's iPhone", "Product Name": "iPhone 15 Pro", "Product Version": "18.1", "Last Backup Date": date],
             manifest: ["IsEncrypted": true],
             size: 42
         )
-        #expect(backup.deviceName == "Kade's iPhone")
+        #expect(backup.deviceName == "Robin's iPhone")
         #expect(backup.productName == "iPhone 15 Pro")
         #expect(backup.systemVersion == "18.1")
         #expect(backup.date == date)

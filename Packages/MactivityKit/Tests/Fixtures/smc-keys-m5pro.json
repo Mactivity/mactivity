@@ -1,5 +1,5 @@
 {
- "_comment": "Temperature and fan keys from this M5 Pro's SMC (a subset of its 3,611 keys), for SensorKeys.groups.",
+ "_comment": "Temperature and fan keys from an M5 Pro's SMC (a subset of its 3,611 keys), for SensorKeys.groups.",
  "chip": "Apple M5 Pro",
  "keys": [
   "#KEY",

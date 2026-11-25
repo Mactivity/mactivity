@@ -20,23 +20,23 @@ struct SSHArgumentsTests {
     @Test("A plain host, a user at a host, and a URI give the host alone")
     func hosts() throws {
         #expect(try parse("example.com").host == "example.com")
-        #expect(try parse("kade@example.com").host == "example.com")
-        #expect(try parse("ssh://kade@example.com").host == "example.com")
-        let uri = try parse("ssh://kade@example.com:2222/")
+        #expect(try parse("robin@example.com").host == "example.com")
+        #expect(try parse("ssh://robin@example.com").host == "example.com")
+        let uri = try parse("ssh://robin@example.com:2222/")
         #expect(uri.host == "example.com" && uri.port == 2222)
         #expect(try parse("10.0.0.5").host == "10.0.0.5")
-        #expect(try parse("kade@[2001:db8::1]").host == "2001:db8::1")
+        #expect(try parse("robin@[2001:db8::1]").host == "2001:db8::1")
         #expect(try parse("ssh://[2001:db8::1]:2200").host == "2001:db8::1")
         #expect(try parse("ssh://[2001:db8::1]:2200").port == 2200)
     }
 
     @Test("A password in a destination never comes through")
     func passwordInDestination() throws {
-        let parsed = try parse("ssh://kade:hunter2@example.com:22/")
+        let parsed = try parse("ssh://robin:hunter2@example.com:22/")
         #expect(parsed.host == "example.com")
         #expect(!String(describing: parsed).contains("hunter2"))
-        #expect(!String(describing: parsed).contains("kade"))
-        #expect(try !String(describing: parse("kade:hunter2@example.com")).contains("hunter2"))
+        #expect(!String(describing: parsed).contains("robin"))
+        #expect(try !String(describing: parse("robin:hunter2@example.com")).contains("hunter2"))
     }
 
     @Test("Something that couldn't be a host isn't kept")
@@ -67,7 +67,7 @@ struct SSHArgumentsTests {
     @Test("A flag's value isn't taken for the host")
     func valuesAreNotHosts() throws {
         #expect(try parse("-i", "/Users/k/.ssh/id_ed25519", "host").host == "host")
-        #expect(try parse("-l", "kade", "host").host == "host")
+        #expect(try parse("-l", "robin", "host").host == "host")
         #expect(try parse("-F", "/tmp/config", "-E", "/tmp/log", "-S", "/tmp/ctl", "-c", "aes256-ctr", "-m", "hmac-sha2-256", "host")
             .host == "host")
         #expect(try parse("-b", "10.0.0.1", "-B", "en0", "-e", "none", "-I", "lib", "-P", "tag", "host").host == "host")
@@ -242,7 +242,7 @@ struct SSHArgumentsTests {
         #expect(try parse("-o", "DynamicForward=1080", "h").forwards.first?.kind == .dynamic)
         #expect(try parse("-o", "DynamicForward=127.0.0.1:1080", "h").forwards.first?.bindAddress == "127.0.0.1")
         #expect(try parse("-o", "Port=2222", "h").port == 2222)
-        #expect(try parse("-o", "ProxyJump=kade@bastion:22", "h").jump == "bastion")
+        #expect(try parse("-o", "ProxyJump=robin@bastion:22", "h").jump == "bastion")
         #expect(try parse("-o", "ForkAfterAuthentication=yes", "h").isInBackground)
         #expect(try parse("-o", "SessionType=none", "h").hasNoRemoteCommand)
         #expect(try parse("-o", "RemoteCommand=uptime", "h").hasRemoteCommand)
@@ -261,7 +261,7 @@ struct SSHArgumentsTests {
             "-oRemoteCommand=none",
             "-oRequestTTY=no",
             "-l",
-            "kade",
+            "robin",
             "--",
             "host",
             "-s",
@@ -279,7 +279,7 @@ struct SSHArgumentsTests {
     func secretsStayOut() throws {
         let arguments = [
             "ssh",
-            "-i", "/Users/kade/.ssh/SECRETKEYFILE",
+            "-i", "/Users/robin/.ssh/SECRETKEYFILE",
             "-o", "ProxyCommand=sshpass -p SECRETPROXY ssh gw",
             "-o", "IdentityFile=/SECRETIDENTITY",
             "-o", "SendEnv=SECRETENV",
@@ -325,19 +325,19 @@ struct SSHArgumentsTests {
 
     @Test("A master that rewrote its arguments says so, and nothing from its title is kept")
     func sharedConnection() throws {
-        let parsed = try #require(SSHArguments.parse(["ssh: /Users/kade/.ssh/cm/SECRETPATH [mux]"]))
+        let parsed = try #require(SSHArguments.parse(["ssh: /Users/robin/.ssh/cm/SECRETPATH [mux]"]))
         #expect(parsed.isSharedConnection && parsed.host == nil)
         #expect(!String(describing: parsed).contains("SECRETPATH"))
-        let split = try #require(SSHArguments.parse(["ssh:", "/Users/kade/.ssh/cm/abc", "[mux]"]))
+        let split = try #require(SSHArguments.parse(["ssh:", "/Users/robin/.ssh/cm/abc", "[mux]"]))
         #expect(split.isSharedConnection)
     }
 
     @Test("Jump hosts lose their users and ports; none means none")
     func jumps() throws {
         #expect(try parse("-J", "bastion", "h").jump == "bastion")
-        #expect(try parse("-J", "kade@bastion:2222", "h").jump == "bastion")
+        #expect(try parse("-J", "robin@bastion:2222", "h").jump == "bastion")
         #expect(try parse("-J", "a@one,b@two:22", "h").jump == "one,two")
-        #expect(try parse("-J", "ssh://kade:SECRET@one:22", "h").jump == "one")
+        #expect(try parse("-J", "ssh://robin:SECRET@one:22", "h").jump == "one")
         #expect(try parse("-J", "none", "h").jump == nil)
     }
 

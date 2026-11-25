@@ -16,7 +16,7 @@ struct CommandLineToolTests {
     @Test("Paths with spaces or quotes are shell-quoted", arguments: [
         ("/Applications/Mactivity.app", "/Applications/Mactivity.app"),
         ("/Users/demo/My Apps/Mactivity.app", "'/Users/demo/My Apps/Mactivity.app'"),
-        ("/Users/demo/Kade's/Mactivity.app", "'/Users/demo/Kade'\\''s/Mactivity.app'"),
+        ("/Users/demo/Robin's/Mactivity.app", "'/Users/demo/Robin'\\''s/Mactivity.app'"),
         ("", "''"),
     ])
     func quoting(path: String, expected: String) {

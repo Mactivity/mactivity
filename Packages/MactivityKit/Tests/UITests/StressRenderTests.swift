@@ -75,7 +75,7 @@ struct StressRenderTests {
             "temperatures": [["id": "cpu", "name": "CPU", "celsius": 109.4], ["id": "gpu", "name": "GPU", "celsius": 104.9]],
             "fans": [["id": 0, "rpm": 6543.0, "minRPM": 1200.0, "maxRPM": 6550.0]],
             "peripherals": [
-                ["id": "a", "name": "Kade’s Magic Keyboard with Touch ID and Numeric Keypad", "kind": "keyboard", "percent": 3],
+                ["id": "a", "name": "Robin’s Magic Keyboard with Touch ID and Numeric Keypad", "kind": "keyboard", "percent": 3],
                 ["id": "b", "name": "AirPods Pro", "kind": "airPods", "percent": 100],
                 ["id": "c", "name": "Magic Trackpad", "kind": "trackpad", "percent": 45],
                 ["id": "d", "name": "MX Master 3S for Mac", "kind": "mouse", "percent": 12],

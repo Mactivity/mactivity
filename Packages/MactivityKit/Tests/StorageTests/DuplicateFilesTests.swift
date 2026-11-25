@@ -4,7 +4,7 @@ import Testing
 
 /// Duplicate files (1.6): which copy stays, and what an extra one frees.
 struct DuplicateFilesTests {
-    let home = "/Users/kade"
+    let home = "/Users/robin"
 
     func candidate(_ path: String, created: TimeInterval, size: UInt64 = 5_000_000) -> DuplicateFiles.Candidate {
         DuplicateFiles.Candidate(
@@ -14,9 +14,9 @@ struct DuplicateFilesTests {
 
     @Test("The kept copy: not the one in Downloads, then the oldest")
     func keeper() {
-        let inDownloads = candidate("/Users/kade/Downloads/clip.mov", created: 100)
-        let inMovies = candidate("/Users/kade/Movies/clip.mov", created: 200)
-        let older = candidate("/Users/kade/Documents/clip.mov", created: 50)
+        let inDownloads = candidate("/Users/robin/Downloads/clip.mov", created: 100)
+        let inMovies = candidate("/Users/robin/Movies/clip.mov", created: 200)
+        let older = candidate("/Users/robin/Documents/clip.mov", created: 50)
         #expect(DuplicateFiles.keeper(of: [inDownloads, inMovies], home: home) == inMovies)
         #expect(DuplicateFiles.keeper(of: [inDownloads, inMovies, older], home: home) == older)
         #expect(DuplicateFiles.keeper(of: [inDownloads], home: home) == inDownloads)

@@ -8,7 +8,7 @@ struct CloudFoldersTests {
     func names() {
         #expect(CloudFolders.displayName("Dropbox") == "Dropbox")
         #expect(CloudFolders.displayName("Dropbox-Personal") == "Dropbox (Personal)")
-        #expect(CloudFolders.displayName("GoogleDrive-kade@example.com") == "Google Drive (kade@example.com)")
+        #expect(CloudFolders.displayName("GoogleDrive-robin@example.com") == "Google Drive (robin@example.com)")
         #expect(CloudFolders.displayName("OneDrive-Personal") == "OneDrive (Personal)")
         #expect(CloudFolders.displayName("Box-Box") == "Box")
         #expect(CloudFolders.displayName("SomeService") == "SomeService")
@@ -37,7 +37,7 @@ struct CloudFoldersTests {
     @Test("Remove Download is only allowed inside a cloud folder")
     func removeScope() {
         #expect(throws: CocoaError.self) {
-            try ICloudDownloads.removeCloudDownload("/Users/kade/Documents/a.pdf", home: "/Users/kade")
+            try ICloudDownloads.removeCloudDownload("/Users/robin/Documents/a.pdf", home: "/Users/robin")
         }
     }
 }

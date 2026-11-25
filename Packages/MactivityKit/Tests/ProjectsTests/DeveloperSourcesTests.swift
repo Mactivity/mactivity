@@ -308,7 +308,7 @@ struct DeveloperSourcesLiveTests {
         """, named: "ssh", in: folder)
         let process = Process()
         process.executableURL = URL(fileURLWithPath: binary)
-        process.arguments = ["-N", "-L", "54722:db.internal:5432", "-o", "ProxyCommand=SECRET", "kade@example.com", "SECRETCOMMAND"]
+        process.arguments = ["-N", "-L", "54722:db.internal:5432", "-o", "ProxyCommand=SECRET", "robin@example.com", "SECRETCOMMAND"]
         process.standardOutput = FileHandle.nullDevice
         process.standardError = FileHandle.nullDevice
         try process.run()

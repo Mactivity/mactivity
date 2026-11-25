@@ -37,7 +37,7 @@ struct MessagesCleanupRenderTests {
         let scan = DeviceBackupsScan(
             backups: [
                 DeviceBackup(
-                    path: "/b/1", deviceName: "Kade's iPhone", productName: "iPhone 17 Pro", systemVersion: "26.0",
+                    path: "/b/1", deviceName: "Robin's iPhone", productName: "iPhone 17 Pro", systemVersion: "26.0",
                     date: now.addingTimeInterval(-2 * 86400), size: 61_000_000_000, isEncrypted: true
                 ),
                 DeviceBackup(
@@ -120,8 +120,8 @@ struct MessagesCleanupRenderTests {
     func yourDisk() async throws {
         let old = Date().addingTimeInterval(-500 * 86400)
         let forgotten = [
-            ForgottenFile(path: "/Users/kade/Movies/Exports/Wedding final.mov", size: 18_400_000_000, lastTouched: old),
-            ForgottenFile(path: "/Users/kade/Documents/Old Mac backup.zip", size: 6_100_000_000, lastTouched: old),
+            ForgottenFile(path: "/Users/robin/Movies/Exports/Wedding final.mov", size: 18_400_000_000, lastTouched: old),
+            ForgottenFile(path: "/Users/robin/Documents/Old Mac backup.zip", size: 6_100_000_000, lastTouched: old),
         ].map { FileCleanupRow(path: $0.path, detail: FileCleanupSource.forgottenDetail($0), size: $0.size, startsTicked: false) }
         try await write(
             FileCleanupSheet(model: FileCleanupModel(.forgotten, loaded: forgotten), trasher: StorageTrasher(home: "/nonexistent")) { _ in
@@ -131,13 +131,13 @@ struct MessagesCleanupRenderTests {
         try await write(
             FileCleanupSheet(model: FileCleanupModel(.duplicates, loaded: [
                 FileCleanupRow(
-                    path: "/Users/kade/Downloads/IMG_2041.mov",
+                    path: "/Users/robin/Downloads/IMG_2041.mov",
                     detail: "Same as ~/Movies/IMG_2041.mov",
                     size: 2_300_000_000,
                     startsTicked: true
                 ),
                 FileCleanupRow(
-                    path: "/Users/kade/Desktop/Deck v2.key",
+                    path: "/Users/robin/Desktop/Deck v2.key",
                     detail: "Same as ~/Documents/Deck v2.key",
                     size: 410_000_000,
                     startsTicked: false
@@ -174,7 +174,7 @@ struct MessagesCleanupRenderTests {
         }
         let model = CompareMacsModel(
             this: mac("Studio", "Mac Studio", "Apple M4 Max", cpu: 14, memory: 22e9, battery: nil),
-            other: mac("Kade's MacBook Pro", "MacBook Pro", "Apple M2 Pro", cpu: 31, memory: 24e9, battery: 0.3)
+            other: mac("Robin's MacBook Pro", "MacBook Pro", "Apple M2 Pro", cpu: 31, memory: 24e9, battery: 0.3)
         )
         try await write(CompareMacsSheet(model: model), name: "compare-macs", size: CGSize(width: 640, height: 600))
     }

@@ -1,5 +1,5 @@
 {
-  "_comment": "IOPSGetPowerSourceDescription dictionaries and AppleSmartBattery properties (only the keys the sampler reads). acCharged is a real reading from a Mac17,9 (M5 Pro) on macOS 27.0: no top-level AppleRawMaxCapacity or DesignCapacity, so health comes from BatteryData (6522 / 6249 mAh = 104%, capped at 100). The other cases are built from it. expected is null where the result must be nil; timeRemainingMinutes, cycleCount, maxCapacityPercent, and powerDrawWatts are null where those fields must be nil.",
+  "_comment": "IOPSGetPowerSourceDescription dictionaries and AppleSmartBattery properties (only the keys the sampler reads). acCharged is a real reading from an M5 Pro Mac on macOS 27.0: no top-level AppleRawMaxCapacity or DesignCapacity, so health comes from BatteryData (6522 / 6249 mAh = 104%, capped at 100). The other cases are built from it. expected is null where the result must be nil; timeRemainingMinutes, cycleCount, maxCapacityPercent, and powerDrawWatts are null where those fields must be nil.",
   "packBatteryData": {
     "Temperature": 2579,
     "VirtualTemperature": 2579

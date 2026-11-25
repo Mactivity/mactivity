@@ -1,5 +1,5 @@
 {
-  "_comment": "NET_RT_IFLIST2 if_data64 byte counters by BSD name. previous is a real reading from a Mac17,9 (M5 Pro) on macOS 27.0 (netstat -ibn), plus en7, a USB Ethernet adapter. current is 5 s later: en0 (Wi-Fi) received 5000000 B and sent 1000000 B, so 1000000 B/s in and 200000 B/s out. Loopback, the VPN tunnel utun5, and AWDL moved bytes too but aren't counted, and en7 was unplugged. en0's counters are past 2^32, which 32-bit if_data would have wrapped.",
+  "_comment": "NET_RT_IFLIST2 if_data64 byte counters by BSD name. previous is a real reading from an M5 Pro Mac on macOS 27.0 (netstat -ibn), plus en7, a USB Ethernet adapter. current is 5 s later: en0 (Wi-Fi) received 5000000 B and sent 1000000 B, so 1000000 B/s in and 200000 B/s out. Loopback, the VPN tunnel utun5, and AWDL moved bytes too but aren't counted, and en7 was unplugged. en0's counters are past 2^32, which 32-bit if_data would have wrapped.",
   "elapsedSeconds": 5.0,
   "previous": {
     "lo0": { "bytesIn": 12826396469, "bytesOut": 12826396469 },

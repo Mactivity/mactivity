@@ -19,7 +19,7 @@ struct MacProfileTests {
 
     @Test("Saved and read back exactly; a newer format or another file isn't read")
     func roundTrip() throws {
-        let profile = Self.profile(name: "Kade's MacBook Pro", cpu: 22, memory: 18e9)
+        let profile = Self.profile(name: "Robin's MacBook Pro", cpu: 22, memory: 18e9)
         let data = try profile.encoded()
         #expect(MacProfile.decode(data) == profile)
         var future = profile

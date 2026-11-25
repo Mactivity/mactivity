@@ -1,5 +1,5 @@
 {
-  "_comment": "Captured from a Mac17,9 (M5 Pro) on macOS 27.0 with ioreg -r -c IOAccelerator -l -a: the AGXAcceleratorG17X PerformanceStatistics and a subset of its AGXDeviceUserClient children (every WindowServer client, then the first 12 others). expectedGPUTime is the per-PID sum of accumulatedGPUTime.",
+  "_comment": "Captured from an M5 Pro Mac on macOS 27.0 with ioreg -r -c IOAccelerator -l -a: the AGXAcceleratorG17X PerformanceStatistics and a subset of its AGXDeviceUserClient children (every WindowServer client, then the first 12 others). expectedGPUTime is the per-PID sum of accumulatedGPUTime.",
   "model": "Apple M5 Pro",
   "performanceStatistics": {
     "Alloc system memory": 9608527872,

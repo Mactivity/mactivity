@@ -207,12 +207,12 @@ struct MountedDrivesTests {
     @Test("The server's name, and never who's logged in or their password")
     func servers() {
         #expect(NetworkDrives.server(fromSource: "//nas.local/Media") == "nas.local")
-        #expect(NetworkDrives.server(fromSource: "//kade@nas.local/Media") == "nas.local")
-        #expect(NetworkDrives.server(fromSource: "//kade:secret@nas.local/Media") == "nas.local")
-        #expect(NetworkDrives.server(fromSource: "//WORK;kade@files.example.com/Share") == "files.example.com")
+        #expect(NetworkDrives.server(fromSource: "//robin@nas.local/Media") == "nas.local")
+        #expect(NetworkDrives.server(fromSource: "//robin:secret@nas.local/Media") == "nas.local")
+        #expect(NetworkDrives.server(fromSource: "//WORK;robin@files.example.com/Share") == "files.example.com")
         #expect(NetworkDrives.server(fromSource: "nas.local:/export/media") == "nas.local")
-        #expect(NetworkDrives.server(fromSource: "https://kade@dav.example.com/files") == "dav.example.com")
-        #expect(NetworkDrives.server(fromSource: "afp://kade@time.local/Backups") == "time.local")
+        #expect(NetworkDrives.server(fromSource: "https://robin@dav.example.com/files") == "dav.example.com")
+        #expect(NetworkDrives.server(fromSource: "afp://robin@time.local/Backups") == "time.local")
         #expect(NetworkDrives.server(fromSource: "") == nil)
     }
 
@@ -249,7 +249,7 @@ struct MountedDrivesTests {
         let hold = DispatchSemaphore(value: 0)
         defer { hold.signal() }
         let entries = [
-            entry("/Volumes/Good", fs: "smbfs", source: "//kade@nas.local/Good", local: false),
+            entry("/Volumes/Good", fs: "smbfs", source: "//robin@nas.local/Good", local: false),
             entry("/Volumes/Dead", fs: "nfs", source: "old.local:/x", local: false, total: 800, available: 300),
         ]
         let source = LiveMountedDrives(

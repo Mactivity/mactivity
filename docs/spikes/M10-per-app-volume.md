@@ -1,6 +1,6 @@
 # M10 spike: per-app volume with Core Audio process taps
 
-2026-09-25 · MacBook Pro M5 Pro (Mac17,9), macOS 27.0, Xcode 27.0, Swift 6.4 · built-in speakers at 48 kHz
+2026-09-25 · MacBook Pro M5 Pro, macOS 27.0, Xcode 27.0, Swift 6.4 · built-in speakers at 48 kHz
 
 ## Recommendation
 
@@ -117,7 +117,7 @@ None used. The one symbol that would help is **`TCCAccessPreflight(kTCCServiceAu
 - **UI**: a slider per app. `.permissionDenied` shows the copy above with a button that opens the privacy pane (`x-apple.systempreferences:com.apple.preference.security?Privacy_AudioCapture`). `.processNotFound` just drops the row.
 - **Package.swift / project.yml**: no change. Audio already depends on Core only, and the new `Synchronization` import is part of the toolchain.
 
-## Manual check with consent (for Kade, signed app)
+## Manual check with consent (for the maintainer, signed app)
 
 1. Add the Info.plist key, build and run Mactivity from Xcode, and start music in Music and a video in Safari.
 2. Drag Music to 50%. Expect the system prompt. Allow it. Drag again. Music should get quieter and Safari should stay the same (that's M10's done-when).

@@ -29,7 +29,7 @@ public struct CPUTopology: Hashable, Sendable, Codable {
     /// Builds a topology from per-level core counts, most performant first (`hw.perflevel0`
     /// first), assuming the kernel numbers the least performant level's cores first.
     ///
-    /// That ordering holds on M1–M4 (E cores first) and on this M5 Pro ("Performance" cores 0–9,
+    /// That ordering holds on M1–M4 (E cores first) and on the M5 Pro ("Performance" cores 0–9,
     /// "Super" cores 10–14, per IORegistry `cluster-type`). M1 verifies it against IORegistry;
     /// see D-005.
     public static func fromPerfLevels(_ levels: [(name: String, count: Int)]) -> CPUTopology {

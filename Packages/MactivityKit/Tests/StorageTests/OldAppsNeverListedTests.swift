@@ -47,8 +47,8 @@ struct OldAppsNeverListedTests {
     func changedID() throws {
         let fixture = try OldAppsFixture()
         try fixture.app("Mactivity", id: "app.mactivity.Mactivity")
-        fixture.recorded = [RecordedApp(name: "Mactivity", bundleID: "com.kadeclifton.mactivity")]
-        try fixture.file("Preferences/com.kadeclifton.mactivity.plist")
+        fixture.recorded = [RecordedApp(name: "Mactivity", bundleID: "com.example.mactivity")]
+        try fixture.file("Preferences/com.example.mactivity.plist")
         #expect(fixture.leftoverNames().isEmpty)
     }
 

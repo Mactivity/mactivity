@@ -10,7 +10,7 @@ public struct MacProfile: Codable, Sendable, Equatable {
     public static let largestFile = 256 * 1024
 
     public var formatVersion = MacProfile.formatVersion
-    /// The Mac's name, as in Sharing settings: "Kade's MacBook Pro".
+    /// The Mac's name, as in Sharing settings: "Robin's MacBook Pro".
     public var name: String
     public var model: String
     public var chip: String
