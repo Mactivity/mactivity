@@ -108,10 +108,10 @@ END="$(cpu_seconds)"
 FOOTPRINT="$(footprint_now)"
 
 MODE="Idle, menu bar $MENUBAR${METRIC:+ $METRIC}${STACKED:+ $STACKED}"
-BUDGET=" (budget: 0.25%, 35 MB)"
+BUDGET=" (budget: 0.5%, 35 MB)"
 if [ -n "$CLOSED" ]; then
     MODE="Window opened on $TAB and closed, menu bar $MENUBAR"
-    BUDGET=" (budget: 0.25%, 75 MB)"
+    BUDGET=" (budget: 0.5%, 75 MB)"
 elif [ -n "$TAB" ]; then
     MODE="Window on $TAB"
     BUDGET=""

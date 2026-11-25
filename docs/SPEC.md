@@ -308,7 +308,7 @@ One `Formatters` namespace in Core: bytes (SI, `kB/MB/GB`, one decimal above 10)
 
 ## 8. Quality bars
 
-- Idle cost under 0.25% of one core (D-266), and physical footprint under 35 MB if the window was never opened and under 75 MB once it has been opened and closed (D-268), measured, at every milestone.
+- Idle cost under 0.5% of one core (D-292), and physical footprint under 35 MB if the window was never opened and under 75 MB once it has been opened and closed (D-268), measured, at every milestone.
 - Installed size: the app bundle under 50 MB (`make size`; 25 MB, 8 MB zipped, at the time of D-058), and the history database under about 60 MB at the longest retention, a year (D-089).
 - Cold launch to menu bar item under 500 ms; menu bar window opens under 100 ms with the last snapshot.
 - Zero private-API code outside `PrivateAPIs`; every wrapper has a fallback and a test.
